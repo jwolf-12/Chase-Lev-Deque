@@ -31,25 +31,23 @@ public:
 
     bool popBottom(int& task){
         size_t b=bottom.load();
+        size_t t=top.load();
+
+        b--;
+        bottom.store(b);
 
         if(b==0){
             return false;
         }
 
-        b--;
-
-        bottom.store(b);
-
-        size_t t=top.load();
-
         if(t<=b){
+            task=buffer[b];
             if(t==b){
                 if(!top.compare_exchange_strong(t,t+1)){
                     bottom.store(b+1);
                     return false;
                 }
             }
-            task=buffer[b];
             return true;
 
         }
@@ -64,10 +62,11 @@ public:
 
         if(t>=b) return false;
 
+        task=buffer[t];
+
         if(!top.compare_exchange_strong(t,t+1)){
             return false;
         }
-        task=buffer[t];
         return true;
     }
 
