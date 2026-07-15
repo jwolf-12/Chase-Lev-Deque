@@ -47,7 +47,7 @@ public:
         task=buffer[b];
         if(size>0) return true;
         if(!top.compare_exchange_strong(t,t+1)){
-            bottom.store(t+1);
+            bottom.store(b+1);
             return false;
         }
         bottom.store(t+1);
