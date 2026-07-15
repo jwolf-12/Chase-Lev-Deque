@@ -36,22 +36,32 @@ public:
 
     bool popBottom(int& task){
         size_t b=bottom.load();
+
+        if(b==0){
+            return false;
+        }
+
         b--;
+
         bottom.store(b);
+
         size_t t=top.load();
-        long long size = b-t;
-        if(size<0){
-            bottom.store(t);
-            return false;
+
+        if(t<=b){
+            if(t==b){
+                if(!top.compare_exchange_strong(t,t+1)){
+                    bottom.store(b+1);
+                    return false;
+                }
+                bottom.store(b+1);
+            }
+            task=buffer[b];
+            return true;
+
         }
-        task=buffer[b];
-        if(size>0) return true;
-        if(!top.compare_exchange_strong(t,t+1)){
-            bottom.store(b+1);
-            return false;
-        }
-        bottom.store(t+1);
-        return true;
+
+        bottom.store(t);
+        return false;
     }
 
     bool steal(int& task){
