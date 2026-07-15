@@ -19,6 +19,11 @@ public:
         top=0;
         bottom=0;
     }
+
+    bool isempthy(){
+        if(bottom.load()==top.load()) return true;
+        return false;
+    }
     
     void pushBottom(int task){
         size_t b= bottom.load();
@@ -31,29 +36,22 @@ public:
 
     bool popBottom(int& task){
         size_t b=bottom.load();
-        size_t t=top.load();
-
         b--;
         bottom.store(b);
-
-        if(b==0){
+        size_t t=top.load();
+        long long size = b-t;
+        if(size<0){
+            bottom.store(t);
             return false;
         }
-
-        if(t<=b){
-            task=buffer[b];
-            if(t==b){
-                if(!top.compare_exchange_strong(t,t+1)){
-                    bottom.store(b+1);
-                    return false;
-                }
-            }
-            return true;
-
+        task=buffer[b];
+        if(size>0) return true;
+        if(!top.compare_exchange_strong(t,t+1)){
+            bottom.store(t+1);
+            return false;
         }
-
-        bottom.store(b+1);
-        return false;
+        bottom.store(t+1);
+        return true;
     }
 
     bool steal(int& task){

@@ -60,15 +60,17 @@ int main()
         {
             dq.pushBottom(i);
 
-            // if(i % 3 == 0)
-            // {
-            //     if(dq.popBottom(task))
-            //     {
-            //         lock_guard<mutex> lock(mtx);
-            //         results.push_back(task);
-            //     }
-            // }
+            if(i % 3 == 0)
+            {
+                if(dq.popBottom(task))
+                {
+                    lock_guard<mutex> lock(mtx);
+                    results.push_back(task);
+                }
+            }
         }
+
+        // std::this_thread::sleep_for(std::chrono::seconds(2));
 
         done.store(true);
     });
