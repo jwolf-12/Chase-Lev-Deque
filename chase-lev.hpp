@@ -71,11 +71,12 @@ public:
         size_t b=bottom.load();
 
         b--; bottom.store(b);
+        task=curr->get(b);
 
         size_t t=top.load();
 
         long long size = b-t;
-        task=curr->get(b);
+        
         if(size<0){
             bottom.store(t);
             task=empty; return;
