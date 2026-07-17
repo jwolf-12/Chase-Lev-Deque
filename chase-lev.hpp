@@ -7,19 +7,44 @@
 
 using namespace std;
 
-class ChaseLevADeque{
+class ChaseLevDeque{
 private:
-    final static size_t initial_log_size=0;
+    static constexpr size_t initial_log_size=0;
 
     atomic<size_t> bottom=0;
     atomic<size_t> top=0;
 
-    vector<CircularArray *> arrays(64,nullptr);
-    vector<size_t> bottoms(64,0);
+    vector<CircularArray *> arrays;
+    vector<size_t> bottoms;
 
-    CircularArray a= new CircularArray(initial_log_size);
-    ararys[initial_log_size]=&a;
+    CircularArray* curr;
+    size_t log_capacity;
 
-    
+public:
+
+    ChaseLevDeque()
+        : arrays(64,nullptr),bottoms(64,0),log_capacity(initial_log_size) {
+            curr= new CircularArray(initial_log_size);
+            arrays[initial_log_size]=curr;
+        }
+
+    void pushBottom(int task){
+        size_t b= bottom.load();
+        size_t t=top.load();
+
+        CircularArray* a = curr;
+
+        long long size = b-t;
+
+        if(size>=a->size()-1){
+            a = curr->grow(b,t);
+            log_capacity++;
+            curr=a;
+            arrays[log_capacity]=curr;
+        }
+
+        a->put(b,task); 
+        bottom.store(b+1);
+    }
 
 };
