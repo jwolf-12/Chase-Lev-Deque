@@ -12,7 +12,7 @@ using namespace std;
 
 int main()
 {
-    ChaseLevDeque dq(100000);
+    ChaseLevDeque dq;
 
     const int TASKS = 10000;
 
@@ -27,12 +27,14 @@ int main()
     {
         thieves.emplace_back([&]()
         {
-            int task;
+            int task = 0;
             int idle = 0;
 
             while(true)
             {
-                if(dq.steal(task))
+                dq.steal(task);
+
+                if(task >= 1)
                 {
                     idle = 0;
 
@@ -54,23 +56,22 @@ int main()
 
     thread owner([&]()
     {
-        int task;
-
-        for(int i = 0; i < TASKS; i++)
+        for(int i = 1; i <= TASKS; i++)
         {
             dq.pushBottom(i);
 
             if(i % 3 == 0)
             {
-                if(dq.popBottom(task))
+                int task = 0;
+                dq.popBottom(task);
+
+                if(task >= 1)
                 {
                     lock_guard<mutex> lock(mtx);
                     results.push_back(task);
                 }
             }
         }
-
-        // std::this_thread::sleep_for(std::chrono::seconds(2));
 
         done.store(true);
     });
@@ -93,7 +94,7 @@ int main()
 
     vector<int> missing;
 
-    for(int i = 0; i < TASKS; i++)
+    for(int i = 1; i <= TASKS; i++)
     {
         if(unique.find(i) == unique.end())
             missing.push_back(i);
