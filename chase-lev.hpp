@@ -5,6 +5,8 @@
 #include <stdexcept>
 #include "circulararray.hpp"
 
+#include <iostream>
+
 using namespace std;
 
 class ChaseLevDeque{
@@ -20,6 +22,8 @@ private:
     CircularArray* curr;
     size_t log_capacity;
 
+    size_t lastTop=0;
+
 public:
     static constexpr int empty=0;
     static constexpr int abort=-1;
@@ -32,12 +36,11 @@ public:
 
     void pushBottom(int task){
         size_t b= bottom.load();
-        size_t t=top.load();
 
-        long long size = b-t;
+        long long size = b-lastTop;
 
-        if(size>=curr->size()-1){
-            CircularArray * a = curr->grow(b,t);
+        if(size>=(curr->size()-1)){
+            CircularArray * a = curr->grow(b,lastTop);
             log_capacity++;
             curr=a;
             arrays[log_capacity]=curr;
@@ -73,10 +76,10 @@ public:
         b--; bottom.store(b);
         task=curr->get(b);
 
-        size_t t=top.load();
+        size_t t=top.load(); lastTop=t;
 
         long long size = b-t;
-        
+
         if(size<0){
             bottom.store(t);
             task=empty; return;
@@ -87,6 +90,7 @@ public:
                 task=abort;
             }
             bottom.store(b+1);
+            lastTop=t+1;
         }
         return;
     }
