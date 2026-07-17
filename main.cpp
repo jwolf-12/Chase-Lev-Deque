@@ -14,7 +14,7 @@ int main()
 {
     ChaseLevDeque dq;
 
-    const int TASKS = 10000;
+    const int TASKS = 100000;
 
     vector<int> results;
     mutex mtx;
@@ -23,7 +23,7 @@ int main()
 
     vector<thread> thieves;
 
-    for(int i = 0; i < 4; i++)
+    for(int i = 0; i < 12; i++)
     {
         thieves.emplace_back([&]()
         {
@@ -56,6 +56,7 @@ int main()
 
     thread owner([&]()
     {
+        auto start = std::chrono::high_resolution_clock::now(); 
         for(int i = 1; i <= TASKS; i++)
         {
             dq.pushBottom(i);
@@ -72,6 +73,9 @@ int main()
                 }
             }
         }
+        auto end = std::chrono::high_resolution_clock::now();    
+        auto us = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();  
+        cout << "Owner loop took " << us << " us (" << (double)us / TASKS << " us/task)\n";     
 
         done.store(true);
     });

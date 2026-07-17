@@ -40,10 +40,15 @@ public:
         long long size = b-lastTop;
 
         if(size>=(curr->size()-1)){
-            CircularArray * a = curr->grow(b,lastTop);
-            log_capacity++;
-            curr=a;
-            arrays[log_capacity]=curr;
+            size_t t = top.load();
+            lastTop=t;
+            size=b-t;
+            if(size>=(curr->size()-1)){
+                CircularArray * a = curr->grow(b,lastTop);
+                log_capacity++;
+                curr=a;
+                arrays[log_capacity]=curr;
+            }
         }
 
         curr->put(b,task); 
@@ -76,7 +81,8 @@ public:
         b--; bottom.store(b);
         task=curr->get(b);
 
-        size_t t=top.load(); lastTop=t;
+        size_t t=top.load(); 
+        lastTop=t;
 
         long long size = b-t;
 
