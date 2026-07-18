@@ -14,7 +14,10 @@ int main()
 {
     ChaseLevDeque dq;
 
-    const int TASKS = 100000;
+    const int BURSTS = 20;
+    const int PUSH_PER_BURST = 2000;
+    const int DRAIN_PER_BURST = 1900;
+    const int TASKS = BURSTS * PUSH_PER_BURST;
 
     vector<int> results;
     mutex mtx;
@@ -23,7 +26,7 @@ int main()
 
     vector<thread> thieves;
 
-    for(int i = 0; i < 12; i++)
+    for(int i = 0; i < 4; i++)
     {
         thieves.emplace_back([&]()
         {
@@ -56,26 +59,39 @@ int main()
 
     thread owner([&]()
     {
-        auto start = std::chrono::high_resolution_clock::now(); 
-        for(int i = 1; i <= TASKS; i++)
+        int task = 1;
+
+        auto start = chrono::high_resolution_clock::now();
+
+        for(int burst = 0; burst < BURSTS; burst++)
         {
-            dq.pushBottom(i);
-
-            if(i % 3 == 0)
+            for(int i = 0; i < PUSH_PER_BURST; i++)
             {
-                int task = 0;
-                dq.popBottom(task);
+                dq.pushBottom(task);
+                task++;
+            }
 
-                if(task >= 1)
+            for(int i = 0; i < DRAIN_PER_BURST; i++)
+            {
+                int t = 0;
+                dq.popBottom(t);
+
+                if(t >= 1)
                 {
                     lock_guard<mutex> lock(mtx);
-                    results.push_back(task);
+                    results.push_back(t);
                 }
             }
+
+            cout << "burst " << burst
+                 << " array_size=" << dq.getCurrentSize()
+                 << " grows=" << dq.growCount
+                 << " shrinks=" << dq.shrinkCount << "\n";
         }
-        auto end = std::chrono::high_resolution_clock::now();    
-        auto us = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();  
-        cout << "Owner loop took " << us << " us (" << (double)us / TASKS << " us/task)\n";     
+
+        auto end = chrono::high_resolution_clock::now();
+        auto us = chrono::duration_cast<chrono::microseconds>(end - start).count();
+        cout << "Owner loop took " << us << " us (" << (double)us / TASKS << " us/task)\n";
 
         done.store(true);
     });

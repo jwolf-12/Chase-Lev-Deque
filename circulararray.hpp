@@ -1,6 +1,7 @@
 #pragma once
 
 #include <vector>
+#include <iostream>
 using namespace std;
 
 class CircularArray{
@@ -16,12 +17,16 @@ public:
         return 1ULL << log_size;
     }
 
+    size_t mask() const{
+        return size()-1;
+    }
+
     int get(size_t i) const{
-        return segment[i%size()];
+        return segment[i&mask()];
     }
 
     void put(size_t i, int value){
-        segment[i%size()]=value;
+        segment[i&mask()]=value;
     }
 
     size_t getLogSize() const{
