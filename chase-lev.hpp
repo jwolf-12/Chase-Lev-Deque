@@ -21,17 +21,17 @@ private:
     vector<CircularArray *> arrays;
     vector<size_t> bottoms;
 
-    CircularArray* curr;
+    atomic<CircularArray*> curr;
     size_t log_capacity;
 
     size_t lastTop=0;
 
     void perhapsShrink(size_t b,size_t t){
-        if(log_capacity>initial_log_size && b-t<curr->size()/K){
+        if(log_capacity>initial_log_size && b-t<curr.load(memory_order_acquire)->size()/K){
             shrinkCount++;
-            curr->copyinto(bottoms[log_capacity-1],b,arrays[log_capacity-1]);
+            curr.load(memory_order_acquire)->copyinto(bottoms[log_capacity-1],b,arrays[log_capacity-1]);
             log_capacity--;
-            curr=arrays[log_capacity];
+            curr.store(arrays[log_capacity],memory_order_release);
         }
     }
 
@@ -39,50 +39,52 @@ public:
     static constexpr int empty=0;
     static constexpr int abort=-1;
 
-    size_t getCurrentSize() const { return curr->size(); }
+    size_t getCurrentSize() const { return curr.load(memory_order_acquire)->size(); }
     long growCount = 0;
     long shrinkCount = 0;
 
     ChaseLevDeque()
         : arrays(64,nullptr),bottoms(64,0),log_capacity(initial_log_size) {
-            curr= new CircularArray(initial_log_size);
-            arrays[initial_log_size]=curr;
+            curr.store( new CircularArray(initial_log_size),memory_order_release);
+            arrays[initial_log_size]=curr.load(memory_order_acquire);
         }
 
     void pushBottom(int task){
-        size_t b= bottom.load();
+        size_t b= bottom.load(memory_order_relaxed);
+        CircularArray* a = curr.load(memory_order_acquire);
 
         long long size = b-lastTop;
 
-        if(size>=(curr->size()-1)){
-            size_t t = top.load();
+        if(size>=(a->size()-1)){
+            size_t t = top.load(memory_order_acquire);
             lastTop=t;
             size=b-t;
-            if(size>=(curr->size()-1)){
+            if(size>=(a->size()-1)){
                 bottoms[log_capacity]=b;
                 growCount++;
-                CircularArray * a = curr->grow(b,lastTop);
+                CircularArray * newa = a->grow(b,lastTop);
                 log_capacity++;
-                curr=a;
-                arrays[log_capacity]=curr;
+                curr.store(newa,memory_order_release);
+                a=newa;
+                arrays[log_capacity]=a;
             }
         }
 
-        curr->put(b,task); 
-        bottom.store(b+1);
+        a->put(b,task); 
+        bottom.store(b+1,memory_order_release);
     }
 
     void steal(int& task){
 
-        size_t t=top.load();
-        size_t b= bottom.load();
+        size_t t=top.load(memory_order_acquire);
+        size_t b= bottom.load(memory_order_acquire);
 
         int size=b-t;
 
-        task=curr->get(t);
+        task=curr.load(memory_order_acquire)->get(t);
         
         if(size>0){
-            if(!top.compare_exchange_strong(t,t+1)){
+            if(!top.compare_exchange_strong(t,t+1,memory_order_seq_cst)){
                 task=abort;
             }
             return;
@@ -93,26 +95,26 @@ public:
     }
 
     void popBottom(int& task){
-        size_t b=bottom.load();
+        size_t b=bottom.load(memory_order_relaxed);
 
-        b--; bottom.store(b);
-        task=curr->get(b);
+        b--; bottom.store(b,memory_order_relaxed);
+        task=curr.load(memory_order_acquire)->get(b);
 
-        size_t t=top.load(); 
+        size_t t=top.load(memory_order_acquire); 
         lastTop=t;
 
         long long size = b-t;
 
         if(size<0){
-            bottom.store(t);
+            bottom.store(t,memory_order_release);
             task=empty; return;
         }
         if(size==0){
-            if(!top.compare_exchange_strong(t,t+1)){
-                bottom.store(b+1);
+            if(!top.compare_exchange_strong(t,t+1,memory_order_seq_cst)){
+                bottom.store(b+1,memory_order_release);
                 task=abort;
             }
-            bottom.store(b+1);
+            bottom.store(b+1,memory_order_release);
             lastTop=t+1;
             return;
         }
