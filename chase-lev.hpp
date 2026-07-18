@@ -13,7 +13,7 @@ class ChaseLevDeque{
 private:
     static constexpr size_t initial_log_size=4;
 
-    static constexpr size_t K=256;
+    static constexpr size_t K=12;
 
     atomic<size_t> bottom=0;
     atomic<size_t> top=0;

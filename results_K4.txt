@@ -1,0 +1,1560 @@
+burst 0 array_size=512 grows=7 shrinks=2
+burst 1 array_size=2048 grows=9 shrinks=2
+burst 2 array_size=2048 grows=9 shrinks=2
+burst 3 array_size=2048 grows=9 shrinks=2
+burst 4 array_size=1024 grows=9 shrinks=3
+burst 5 array_size=512 grows=10 shrinks=5
+burst 6 array_size=1024 grows=11 shrinks=5
+burst 7 array_size=512 grows=12 shrinks=7
+burst 8 array_size=512 grows=14 shrinks=9
+burst 9 array_size=1024 grows=15 shrinks=9
+burst 10 array_size=1024 grows=16 shrinks=10
+burst 11 array_size=1024 grows=16 shrinks=10
+burst 12 array_size=1024 grows=16 shrinks=10
+burst 13 array_size=2048 grows=17 shrinks=10
+burst 14 array_size=2048 grows=17 shrinks=10
+burst 15 array_size=1024 grows=17 shrinks=11
+burst 16 array_size=512 grows=18 shrinks=13
+burst 17 array_size=2048 grows=20 shrinks=13
+burst 18 array_size=1024 grows=20 shrinks=14
+burst 19 array_size=512 grows=21 shrinks=16
+Owner loop took 20073 us (0.501825 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=2048 grows=7 shrinks=0
+burst 1 array_size=1024 grows=7 shrinks=1
+burst 2 array_size=2048 grows=8 shrinks=1
+burst 3 array_size=1024 grows=8 shrinks=2
+burst 4 array_size=512 grows=9 shrinks=4
+burst 5 array_size=1024 grows=10 shrinks=4
+burst 6 array_size=512 grows=11 shrinks=6
+burst 7 array_size=512 grows=13 shrinks=8
+burst 8 array_size=256 grows=15 shrinks=11
+burst 9 array_size=512 grows=18 shrinks=13
+burst 10 array_size=512 grows=20 shrinks=15
+burst 11 array_size=1024 grows=21 shrinks=15
+burst 12 array_size=2048 grows=22 shrinks=15
+burst 13 array_size=1024 grows=22 shrinks=16
+burst 14 array_size=2048 grows=23 shrinks=16
+burst 15 array_size=1024 grows=23 shrinks=17
+burst 16 array_size=512 grows=24 shrinks=19
+burst 17 array_size=2048 grows=26 shrinks=19
+burst 18 array_size=2048 grows=26 shrinks=19
+burst 19 array_size=1024 grows=26 shrinks=20
+Owner loop took 8407 us (0.210175 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=2048 grows=7 shrinks=0
+burst 1 array_size=2048 grows=7 shrinks=0
+burst 2 array_size=2048 grows=7 shrinks=0
+burst 3 array_size=1024 grows=7 shrinks=1
+burst 4 array_size=1024 grows=8 shrinks=2
+burst 5 array_size=2048 grows=9 shrinks=2
+burst 6 array_size=1024 grows=9 shrinks=3
+burst 7 array_size=512 grows=10 shrinks=5
+burst 8 array_size=1024 grows=12 shrinks=6
+burst 9 array_size=2048 grows=13 shrinks=6
+burst 10 array_size=1024 grows=13 shrinks=7
+burst 11 array_size=2048 grows=14 shrinks=7
+burst 12 array_size=2048 grows=14 shrinks=7
+burst 13 array_size=2048 grows=14 shrinks=7
+burst 14 array_size=1024 grows=14 shrinks=8
+burst 15 array_size=1024 grows=14 shrinks=8
+burst 16 array_size=2048 grows=15 shrinks=8
+burst 17 array_size=2048 grows=15 shrinks=8
+burst 18 array_size=1024 grows=15 shrinks=9
+burst 19 array_size=2048 grows=16 shrinks=9
+Owner loop took 12355 us (0.308875 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=2048 grows=7 shrinks=0
+burst 1 array_size=2048 grows=7 shrinks=0
+burst 2 array_size=1024 grows=7 shrinks=1
+burst 3 array_size=2048 grows=8 shrinks=1
+burst 4 array_size=1024 grows=8 shrinks=2
+burst 5 array_size=1024 grows=9 shrinks=3
+burst 6 array_size=2048 grows=10 shrinks=3
+burst 7 array_size=1024 grows=10 shrinks=4
+burst 8 array_size=2048 grows=11 shrinks=4
+burst 9 array_size=1024 grows=11 shrinks=5
+burst 10 array_size=512 grows=11 shrinks=6
+burst 11 array_size=1024 grows=12 shrinks=6
+burst 12 array_size=1024 grows=13 shrinks=7
+burst 13 array_size=2048 grows=14 shrinks=7
+burst 14 array_size=2048 grows=14 shrinks=7
+burst 15 array_size=1024 grows=14 shrinks=8
+burst 16 array_size=2048 grows=15 shrinks=8
+burst 17 array_size=2048 grows=15 shrinks=8
+burst 18 array_size=1024 grows=15 shrinks=9
+burst 19 array_size=2048 grows=16 shrinks=9
+Owner loop took 13562 us (0.33905 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=2048 grows=7 shrinks=0
+burst 1 array_size=2048 grows=7 shrinks=0
+burst 2 array_size=1024 grows=7 shrinks=1
+burst 3 array_size=2048 grows=8 shrinks=1
+burst 4 array_size=512 grows=8 shrinks=3
+burst 5 array_size=512 grows=10 shrinks=5
+burst 6 array_size=2048 grows=12 shrinks=5
+burst 7 array_size=1024 grows=12 shrinks=6
+burst 8 array_size=512 grows=13 shrinks=8
+burst 9 array_size=2048 grows=15 shrinks=8
+burst 10 array_size=512 grows=15 shrinks=10
+burst 11 array_size=1024 grows=16 shrinks=10
+burst 12 array_size=512 grows=17 shrinks=12
+burst 13 array_size=2048 grows=19 shrinks=12
+burst 14 array_size=1024 grows=19 shrinks=13
+burst 15 array_size=2048 grows=20 shrinks=13
+burst 16 array_size=512 grows=20 shrinks=15
+burst 17 array_size=2048 grows=22 shrinks=15
+burst 18 array_size=512 grows=22 shrinks=17
+burst 19 array_size=2048 grows=24 shrinks=17
+Owner loop took 8730 us (0.21825 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=2048 grows=7 shrinks=0
+burst 1 array_size=2048 grows=7 shrinks=0
+burst 2 array_size=2048 grows=7 shrinks=0
+burst 3 array_size=2048 grows=7 shrinks=0
+burst 4 array_size=1024 grows=7 shrinks=1
+burst 5 array_size=512 grows=8 shrinks=3
+burst 6 array_size=2048 grows=10 shrinks=3
+burst 7 array_size=2048 grows=10 shrinks=3
+burst 8 array_size=2048 grows=10 shrinks=3
+burst 9 array_size=2048 grows=10 shrinks=3
+burst 10 array_size=2048 grows=10 shrinks=3
+burst 11 array_size=2048 grows=10 shrinks=3
+burst 12 array_size=1024 grows=10 shrinks=4
+burst 13 array_size=512 grows=11 shrinks=6
+burst 14 array_size=2048 grows=13 shrinks=6
+burst 15 array_size=1024 grows=13 shrinks=7
+burst 16 array_size=2048 grows=14 shrinks=7
+burst 17 array_size=2048 grows=14 shrinks=7
+burst 18 array_size=1024 grows=14 shrinks=8
+burst 19 array_size=512 grows=15 shrinks=10
+Owner loop took 16079 us (0.401975 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=512 grows=7 shrinks=2
+burst 1 array_size=512 grows=9 shrinks=4
+burst 2 array_size=256 grows=11 shrinks=7
+burst 3 array_size=256 grows=14 shrinks=10
+burst 4 array_size=512 grows=17 shrinks=12
+burst 5 array_size=512 grows=18 shrinks=13
+burst 6 array_size=2048 grows=20 shrinks=13
+burst 7 array_size=1024 grows=20 shrinks=14
+burst 8 array_size=2048 grows=21 shrinks=14
+burst 9 array_size=1024 grows=21 shrinks=15
+burst 10 array_size=512 grows=22 shrinks=17
+burst 11 array_size=2048 grows=24 shrinks=17
+burst 12 array_size=1024 grows=24 shrinks=18
+burst 13 array_size=2048 grows=25 shrinks=18
+burst 14 array_size=2048 grows=25 shrinks=18
+burst 15 array_size=2048 grows=25 shrinks=18
+burst 16 array_size=2048 grows=25 shrinks=18
+burst 17 array_size=1024 grows=25 shrinks=19
+burst 18 array_size=512 grows=26 shrinks=21
+burst 19 array_size=256 grows=27 shrinks=23
+Owner loop took 12298 us (0.30745 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=512 grows=7 shrinks=2
+burst 1 array_size=1024 grows=9 shrinks=3
+burst 2 array_size=2048 grows=10 shrinks=3
+burst 3 array_size=1024 grows=10 shrinks=4
+burst 4 array_size=512 grows=11 shrinks=6
+burst 5 array_size=2048 grows=13 shrinks=6
+burst 6 array_size=1024 grows=13 shrinks=7
+burst 7 array_size=1024 grows=14 shrinks=8
+burst 8 array_size=2048 grows=15 shrinks=8
+burst 9 array_size=512 grows=15 shrinks=10
+burst 10 array_size=512 grows=17 shrinks=12
+burst 11 array_size=1024 grows=19 shrinks=13
+burst 12 array_size=2048 grows=20 shrinks=13
+burst 13 array_size=1024 grows=20 shrinks=14
+burst 14 array_size=2048 grows=21 shrinks=14
+burst 15 array_size=1024 grows=21 shrinks=15
+burst 16 array_size=2048 grows=22 shrinks=15
+burst 17 array_size=1024 grows=22 shrinks=16
+burst 18 array_size=2048 grows=23 shrinks=16
+burst 19 array_size=2048 grows=23 shrinks=16
+Owner loop took 9542 us (0.23855 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=1024 grows=7 shrinks=1
+burst 1 array_size=512 grows=8 shrinks=3
+burst 2 array_size=1024 grows=10 shrinks=4
+burst 3 array_size=2048 grows=11 shrinks=4
+burst 4 array_size=2048 grows=11 shrinks=4
+burst 5 array_size=1024 grows=11 shrinks=5
+burst 6 array_size=2048 grows=12 shrinks=5
+burst 7 array_size=2048 grows=12 shrinks=5
+burst 8 array_size=2048 grows=12 shrinks=5
+burst 9 array_size=2048 grows=12 shrinks=5
+burst 10 array_size=2048 grows=12 shrinks=5
+burst 11 array_size=1024 grows=12 shrinks=6
+burst 12 array_size=1024 grows=13 shrinks=7
+burst 13 array_size=512 grows=14 shrinks=9
+burst 14 array_size=512 grows=16 shrinks=11
+burst 15 array_size=2048 grows=18 shrinks=11
+burst 16 array_size=2048 grows=18 shrinks=11
+burst 17 array_size=1024 grows=18 shrinks=12
+burst 18 array_size=1024 grows=19 shrinks=13
+burst 19 array_size=2048 grows=20 shrinks=13
+Owner loop took 9729 us (0.243225 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=2048 grows=7 shrinks=0
+burst 1 array_size=1024 grows=7 shrinks=1
+burst 2 array_size=512 grows=8 shrinks=3
+burst 3 array_size=1024 grows=10 shrinks=4
+burst 4 array_size=2048 grows=11 shrinks=4
+burst 5 array_size=1024 grows=11 shrinks=5
+burst 6 array_size=2048 grows=12 shrinks=5
+burst 7 array_size=1024 grows=12 shrinks=6
+burst 8 array_size=512 grows=13 shrinks=8
+burst 9 array_size=512 grows=15 shrinks=10
+burst 10 array_size=2048 grows=17 shrinks=10
+burst 11 array_size=1024 grows=17 shrinks=11
+burst 12 array_size=2048 grows=18 shrinks=11
+burst 13 array_size=2048 grows=18 shrinks=11
+burst 14 array_size=2048 grows=18 shrinks=11
+burst 15 array_size=2048 grows=18 shrinks=11
+burst 16 array_size=2048 grows=18 shrinks=11
+burst 17 array_size=2048 grows=18 shrinks=11
+burst 18 array_size=2048 grows=18 shrinks=11
+burst 19 array_size=1024 grows=18 shrinks=12
+Owner loop took 8757 us (0.218925 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=2048 grows=7 shrinks=0
+burst 1 array_size=1024 grows=7 shrinks=1
+burst 2 array_size=512 grows=8 shrinks=3
+burst 3 array_size=2048 grows=10 shrinks=3
+burst 4 array_size=2048 grows=10 shrinks=3
+burst 5 array_size=1024 grows=10 shrinks=4
+burst 6 array_size=2048 grows=11 shrinks=4
+burst 7 array_size=1024 grows=11 shrinks=5
+burst 8 array_size=1024 grows=12 shrinks=6
+burst 9 array_size=2048 grows=13 shrinks=6
+burst 10 array_size=1024 grows=13 shrinks=7
+burst 11 array_size=512 grows=14 shrinks=9
+burst 12 array_size=1024 grows=16 shrinks=10
+burst 13 array_size=2048 grows=17 shrinks=10
+burst 14 array_size=1024 grows=17 shrinks=11
+burst 15 array_size=1024 grows=18 shrinks=12
+burst 16 array_size=2048 grows=19 shrinks=12
+burst 17 array_size=512 grows=19 shrinks=14
+burst 18 array_size=2048 grows=21 shrinks=14
+burst 19 array_size=2048 grows=21 shrinks=14
+Owner loop took 8695 us (0.217375 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=2048 grows=7 shrinks=0
+burst 1 array_size=1024 grows=7 shrinks=1
+burst 2 array_size=1024 grows=8 shrinks=2
+burst 3 array_size=512 grows=9 shrinks=4
+burst 4 array_size=2048 grows=11 shrinks=4
+burst 5 array_size=1024 grows=11 shrinks=5
+burst 6 array_size=512 grows=12 shrinks=7
+burst 7 array_size=2048 grows=14 shrinks=7
+burst 8 array_size=1024 grows=14 shrinks=8
+burst 9 array_size=512 grows=15 shrinks=10
+burst 10 array_size=1024 grows=16 shrinks=10
+burst 11 array_size=1024 grows=16 shrinks=10
+burst 12 array_size=2048 grows=17 shrinks=10
+burst 13 array_size=1024 grows=17 shrinks=11
+burst 14 array_size=1024 grows=18 shrinks=12
+burst 15 array_size=512 grows=19 shrinks=14
+burst 16 array_size=2048 grows=21 shrinks=14
+burst 17 array_size=1024 grows=21 shrinks=15
+burst 18 array_size=512 grows=22 shrinks=17
+burst 19 array_size=2048 grows=24 shrinks=17
+Owner loop took 12437 us (0.310925 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=512 grows=7 shrinks=2
+burst 1 array_size=256 grows=9 shrinks=5
+burst 2 array_size=512 grows=12 shrinks=7
+burst 3 array_size=512 grows=14 shrinks=9
+burst 4 array_size=256 grows=16 shrinks=12
+burst 5 array_size=1024 grows=19 shrinks=13
+burst 6 array_size=512 grows=20 shrinks=15
+burst 7 array_size=512 grows=22 shrinks=17
+burst 8 array_size=1024 grows=24 shrinks=18
+burst 9 array_size=2048 grows=25 shrinks=18
+burst 10 array_size=512 grows=25 shrinks=20
+burst 11 array_size=1024 grows=27 shrinks=21
+burst 12 array_size=512 grows=28 shrinks=23
+burst 13 array_size=512 grows=30 shrinks=25
+burst 14 array_size=512 grows=32 shrinks=27
+burst 15 array_size=1024 grows=34 shrinks=28
+burst 16 array_size=2048 grows=35 shrinks=28
+burst 17 array_size=512 grows=35 shrinks=30
+burst 18 array_size=512 grows=37 shrinks=32
+burst 19 array_size=1024 grows=39 shrinks=33
+Owner loop took 18753 us (0.468825 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=1024 grows=7 shrinks=1
+burst 1 array_size=512 grows=8 shrinks=3
+burst 2 array_size=512 grows=10 shrinks=5
+burst 3 array_size=1024 grows=12 shrinks=6
+burst 4 array_size=2048 grows=13 shrinks=6
+burst 5 array_size=2048 grows=13 shrinks=6
+burst 6 array_size=2048 grows=13 shrinks=6
+burst 7 array_size=1024 grows=13 shrinks=7
+burst 8 array_size=2048 grows=14 shrinks=7
+burst 9 array_size=2048 grows=14 shrinks=7
+burst 10 array_size=2048 grows=14 shrinks=7
+burst 11 array_size=2048 grows=14 shrinks=7
+burst 12 array_size=1024 grows=14 shrinks=8
+burst 13 array_size=512 grows=15 shrinks=10
+burst 14 array_size=2048 grows=17 shrinks=10
+burst 15 array_size=1024 grows=17 shrinks=11
+burst 16 array_size=2048 grows=18 shrinks=11
+burst 17 array_size=1024 grows=18 shrinks=12
+burst 18 array_size=2048 grows=19 shrinks=12
+burst 19 array_size=1024 grows=19 shrinks=13
+Owner loop took 10633 us (0.265825 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=1024 grows=7 shrinks=1
+burst 1 array_size=1024 grows=8 shrinks=2
+burst 2 array_size=1024 grows=9 shrinks=3
+burst 3 array_size=1024 grows=10 shrinks=4
+burst 4 array_size=1024 grows=11 shrinks=5
+burst 5 array_size=512 grows=12 shrinks=7
+burst 6 array_size=1024 grows=14 shrinks=8
+burst 7 array_size=512 grows=15 shrinks=10
+burst 8 array_size=2048 grows=17 shrinks=10
+burst 9 array_size=1024 grows=17 shrinks=11
+burst 10 array_size=2048 grows=18 shrinks=11
+burst 11 array_size=2048 grows=18 shrinks=11
+burst 12 array_size=1024 grows=18 shrinks=12
+burst 13 array_size=512 grows=19 shrinks=14
+burst 14 array_size=1024 grows=21 shrinks=15
+burst 15 array_size=2048 grows=22 shrinks=15
+burst 16 array_size=1024 grows=22 shrinks=16
+burst 17 array_size=512 grows=23 shrinks=18
+burst 18 array_size=2048 grows=25 shrinks=18
+burst 19 array_size=512 grows=25 shrinks=20
+Owner loop took 9039 us (0.225975 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=2048 grows=7 shrinks=0
+burst 1 array_size=1024 grows=7 shrinks=1
+burst 2 array_size=2048 grows=8 shrinks=1
+burst 3 array_size=1024 grows=8 shrinks=2
+burst 4 array_size=512 grows=9 shrinks=4
+burst 5 array_size=512 grows=11 shrinks=6
+burst 6 array_size=1024 grows=13 shrinks=7
+burst 7 array_size=512 grows=14 shrinks=9
+burst 8 array_size=512 grows=16 shrinks=11
+burst 9 array_size=2048 grows=18 shrinks=11
+burst 10 array_size=512 grows=18 shrinks=13
+burst 11 array_size=1024 grows=20 shrinks=14
+burst 12 array_size=512 grows=21 shrinks=16
+burst 13 array_size=256 grows=23 shrinks=19
+burst 14 array_size=1024 grows=25 shrinks=19
+burst 15 array_size=2048 grows=26 shrinks=19
+burst 16 array_size=1024 grows=26 shrinks=20
+burst 17 array_size=2048 grows=27 shrinks=20
+burst 18 array_size=2048 grows=27 shrinks=20
+burst 19 array_size=1024 grows=27 shrinks=21
+Owner loop took 13347 us (0.333675 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=1024 grows=7 shrinks=1
+burst 1 array_size=512 grows=8 shrinks=3
+burst 2 array_size=2048 grows=10 shrinks=3
+burst 3 array_size=1024 grows=10 shrinks=4
+burst 4 array_size=2048 grows=11 shrinks=4
+burst 5 array_size=2048 grows=11 shrinks=4
+burst 6 array_size=2048 grows=11 shrinks=4
+burst 7 array_size=1024 grows=11 shrinks=5
+burst 8 array_size=1024 grows=12 shrinks=6
+burst 9 array_size=2048 grows=13 shrinks=6
+burst 10 array_size=512 grows=13 shrinks=8
+burst 11 array_size=512 grows=15 shrinks=10
+burst 12 array_size=2048 grows=17 shrinks=10
+burst 13 array_size=1024 grows=17 shrinks=11
+burst 14 array_size=512 grows=18 shrinks=13
+burst 15 array_size=1024 grows=20 shrinks=14
+burst 16 array_size=1024 grows=21 shrinks=15
+burst 17 array_size=2048 grows=22 shrinks=15
+burst 18 array_size=2048 grows=22 shrinks=15
+burst 19 array_size=1024 grows=22 shrinks=16
+Owner loop took 9776 us (0.2444 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=2048 grows=7 shrinks=0
+burst 1 array_size=2048 grows=7 shrinks=0
+burst 2 array_size=2048 grows=7 shrinks=0
+burst 3 array_size=1024 grows=7 shrinks=1
+burst 4 array_size=512 grows=8 shrinks=3
+burst 5 array_size=512 grows=10 shrinks=5
+burst 6 array_size=2048 grows=12 shrinks=5
+burst 7 array_size=1024 grows=12 shrinks=6
+burst 8 array_size=512 grows=13 shrinks=8
+burst 9 array_size=256 grows=15 shrinks=11
+burst 10 array_size=512 grows=18 shrinks=13
+burst 11 array_size=2048 grows=20 shrinks=13
+burst 12 array_size=1024 grows=20 shrinks=14
+burst 13 array_size=1024 grows=21 shrinks=15
+burst 14 array_size=1024 grows=22 shrinks=16
+burst 15 array_size=512 grows=23 shrinks=18
+burst 16 array_size=512 grows=25 shrinks=20
+burst 17 array_size=512 grows=27 shrinks=22
+burst 18 array_size=1024 grows=29 shrinks=23
+burst 19 array_size=512 grows=30 shrinks=25
+Owner loop took 8029 us (0.200725 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=2048 grows=7 shrinks=0
+burst 1 array_size=1024 grows=7 shrinks=1
+burst 2 array_size=512 grows=8 shrinks=3
+burst 3 array_size=512 grows=10 shrinks=5
+burst 4 array_size=2048 grows=12 shrinks=5
+burst 5 array_size=2048 grows=12 shrinks=5
+burst 6 array_size=2048 grows=12 shrinks=5
+burst 7 array_size=1024 grows=12 shrinks=6
+burst 8 array_size=2048 grows=13 shrinks=6
+burst 9 array_size=1024 grows=13 shrinks=7
+burst 10 array_size=2048 grows=14 shrinks=7
+burst 11 array_size=1024 grows=14 shrinks=8
+burst 12 array_size=2048 grows=15 shrinks=8
+burst 13 array_size=1024 grows=15 shrinks=9
+burst 14 array_size=2048 grows=16 shrinks=9
+burst 15 array_size=2048 grows=16 shrinks=9
+burst 16 array_size=2048 grows=16 shrinks=9
+burst 17 array_size=1024 grows=16 shrinks=10
+burst 18 array_size=2048 grows=17 shrinks=10
+burst 19 array_size=1024 grows=17 shrinks=11
+Owner loop took 8129 us (0.203225 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=2048 grows=7 shrinks=0
+burst 1 array_size=2048 grows=7 shrinks=0
+burst 2 array_size=2048 grows=7 shrinks=0
+burst 3 array_size=2048 grows=7 shrinks=0
+burst 4 array_size=2048 grows=7 shrinks=0
+burst 5 array_size=2048 grows=7 shrinks=0
+burst 6 array_size=2048 grows=7 shrinks=0
+burst 7 array_size=1024 grows=7 shrinks=1
+burst 8 array_size=512 grows=8 shrinks=3
+burst 9 array_size=2048 grows=10 shrinks=3
+burst 10 array_size=2048 grows=10 shrinks=3
+burst 11 array_size=1024 grows=10 shrinks=4
+burst 12 array_size=512 grows=11 shrinks=6
+burst 13 array_size=512 grows=13 shrinks=8
+burst 14 array_size=2048 grows=15 shrinks=8
+burst 15 array_size=512 grows=15 shrinks=10
+burst 16 array_size=2048 grows=17 shrinks=10
+burst 17 array_size=1024 grows=17 shrinks=11
+burst 18 array_size=512 grows=18 shrinks=13
+burst 19 array_size=1024 grows=20 shrinks=14
+Owner loop took 8509 us (0.212725 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=512 grows=7 shrinks=2
+burst 1 array_size=512 grows=9 shrinks=4
+burst 2 array_size=1024 grows=11 shrinks=5
+burst 3 array_size=512 grows=12 shrinks=7
+burst 4 array_size=512 grows=14 shrinks=9
+burst 5 array_size=1024 grows=15 shrinks=9
+burst 6 array_size=2048 grows=16 shrinks=9
+burst 7 array_size=2048 grows=16 shrinks=9
+burst 8 array_size=1024 grows=16 shrinks=10
+burst 9 array_size=1024 grows=17 shrinks=11
+burst 10 array_size=1024 grows=18 shrinks=12
+burst 11 array_size=2048 grows=19 shrinks=12
+burst 12 array_size=1024 grows=19 shrinks=13
+burst 13 array_size=512 grows=20 shrinks=15
+burst 14 array_size=2048 grows=22 shrinks=15
+burst 15 array_size=2048 grows=22 shrinks=15
+burst 16 array_size=1024 grows=22 shrinks=16
+burst 17 array_size=2048 grows=23 shrinks=16
+burst 18 array_size=2048 grows=23 shrinks=16
+burst 19 array_size=2048 grows=23 shrinks=16
+Owner loop took 8513 us (0.212825 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=2048 grows=7 shrinks=0
+burst 1 array_size=1024 grows=7 shrinks=1
+burst 2 array_size=1024 grows=8 shrinks=2
+burst 3 array_size=2048 grows=9 shrinks=2
+burst 4 array_size=512 grows=9 shrinks=4
+burst 5 array_size=512 grows=11 shrinks=6
+burst 6 array_size=2048 grows=13 shrinks=6
+burst 7 array_size=2048 grows=13 shrinks=6
+burst 8 array_size=2048 grows=13 shrinks=6
+burst 9 array_size=2048 grows=13 shrinks=6
+burst 10 array_size=1024 grows=13 shrinks=7
+burst 11 array_size=512 grows=14 shrinks=9
+burst 12 array_size=2048 grows=16 shrinks=9
+burst 13 array_size=1024 grows=16 shrinks=10
+burst 14 array_size=512 grows=16 shrinks=11
+burst 15 array_size=512 grows=17 shrinks=12
+burst 16 array_size=1024 grows=19 shrinks=13
+burst 17 array_size=512 grows=20 shrinks=15
+burst 18 array_size=1024 grows=22 shrinks=16
+burst 19 array_size=512 grows=23 shrinks=18
+Owner loop took 17872 us (0.4468 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=512 grows=7 shrinks=2
+burst 1 array_size=512 grows=9 shrinks=4
+burst 2 array_size=2048 grows=11 shrinks=4
+burst 3 array_size=1024 grows=11 shrinks=5
+burst 4 array_size=1024 grows=12 shrinks=6
+burst 5 array_size=2048 grows=13 shrinks=6
+burst 6 array_size=2048 grows=13 shrinks=6
+burst 7 array_size=2048 grows=13 shrinks=6
+burst 8 array_size=1024 grows=13 shrinks=7
+burst 9 array_size=2048 grows=14 shrinks=7
+burst 10 array_size=2048 grows=14 shrinks=7
+burst 11 array_size=2048 grows=14 shrinks=7
+burst 12 array_size=2048 grows=14 shrinks=7
+burst 13 array_size=1024 grows=14 shrinks=8
+burst 14 array_size=2048 grows=15 shrinks=8
+burst 15 array_size=2048 grows=15 shrinks=8
+burst 16 array_size=2048 grows=15 shrinks=8
+burst 17 array_size=1024 grows=15 shrinks=9
+burst 18 array_size=512 grows=16 shrinks=11
+burst 19 array_size=256 grows=18 shrinks=14
+Owner loop took 26998 us (0.67495 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=2048 grows=7 shrinks=0
+burst 1 array_size=1024 grows=7 shrinks=1
+burst 2 array_size=512 grows=8 shrinks=3
+burst 3 array_size=256 grows=10 shrinks=6
+burst 4 array_size=2048 grows=13 shrinks=6
+burst 5 array_size=1024 grows=13 shrinks=7
+burst 6 array_size=512 grows=14 shrinks=9
+burst 7 array_size=512 grows=16 shrinks=11
+burst 8 array_size=1024 grows=18 shrinks=12
+burst 9 array_size=512 grows=19 shrinks=14
+burst 10 array_size=1024 grows=20 shrinks=14
+burst 11 array_size=512 grows=21 shrinks=16
+burst 12 array_size=512 grows=23 shrinks=18
+burst 13 array_size=512 grows=25 shrinks=20
+burst 14 array_size=2048 grows=27 shrinks=20
+burst 15 array_size=2048 grows=27 shrinks=20
+burst 16 array_size=2048 grows=27 shrinks=20
+burst 17 array_size=1024 grows=27 shrinks=21
+burst 18 array_size=1024 grows=28 shrinks=22
+burst 19 array_size=512 grows=29 shrinks=24
+Owner loop took 8442 us (0.21105 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=2048 grows=7 shrinks=0
+burst 1 array_size=2048 grows=7 shrinks=0
+burst 2 array_size=2048 grows=7 shrinks=0
+burst 3 array_size=2048 grows=7 shrinks=0
+burst 4 array_size=2048 grows=7 shrinks=0
+burst 5 array_size=1024 grows=7 shrinks=1
+burst 6 array_size=2048 grows=8 shrinks=1
+burst 7 array_size=2048 grows=8 shrinks=1
+burst 8 array_size=1024 grows=8 shrinks=2
+burst 9 array_size=2048 grows=9 shrinks=2
+burst 10 array_size=1024 grows=9 shrinks=3
+burst 11 array_size=2048 grows=10 shrinks=3
+burst 12 array_size=2048 grows=10 shrinks=3
+burst 13 array_size=2048 grows=10 shrinks=3
+burst 14 array_size=2048 grows=10 shrinks=3
+burst 15 array_size=1024 grows=10 shrinks=4
+burst 16 array_size=512 grows=11 shrinks=6
+burst 17 array_size=2048 grows=13 shrinks=6
+burst 18 array_size=512 grows=13 shrinks=8
+burst 19 array_size=512 grows=15 shrinks=10
+Owner loop took 9435 us (0.235875 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=1024 grows=7 shrinks=1
+burst 1 array_size=2048 grows=8 shrinks=1
+burst 2 array_size=2048 grows=8 shrinks=1
+burst 3 array_size=1024 grows=8 shrinks=2
+burst 4 array_size=2048 grows=9 shrinks=2
+burst 5 array_size=2048 grows=9 shrinks=2
+burst 6 array_size=1024 grows=9 shrinks=3
+burst 7 array_size=512 grows=10 shrinks=5
+burst 8 array_size=2048 grows=12 shrinks=5
+burst 9 array_size=1024 grows=12 shrinks=6
+burst 10 array_size=2048 grows=13 shrinks=6
+burst 11 array_size=1024 grows=13 shrinks=7
+burst 12 array_size=2048 grows=14 shrinks=7
+burst 13 array_size=2048 grows=14 shrinks=7
+burst 14 array_size=2048 grows=14 shrinks=7
+burst 15 array_size=2048 grows=14 shrinks=7
+burst 16 array_size=1024 grows=14 shrinks=8
+burst 17 array_size=1024 grows=15 shrinks=9
+burst 18 array_size=1024 grows=16 shrinks=10
+burst 19 array_size=512 grows=17 shrinks=12
+Owner loop took 8400 us (0.21 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=2048 grows=7 shrinks=0
+burst 1 array_size=2048 grows=7 shrinks=0
+burst 2 array_size=512 grows=7 shrinks=2
+burst 3 array_size=2048 grows=9 shrinks=2
+burst 4 array_size=2048 grows=9 shrinks=2
+burst 5 array_size=2048 grows=9 shrinks=2
+burst 6 array_size=1024 grows=9 shrinks=3
+burst 7 array_size=2048 grows=10 shrinks=3
+burst 8 array_size=1024 grows=10 shrinks=4
+burst 9 array_size=2048 grows=11 shrinks=4
+burst 10 array_size=1024 grows=11 shrinks=5
+burst 11 array_size=1024 grows=12 shrinks=6
+burst 12 array_size=512 grows=13 shrinks=8
+burst 13 array_size=1024 grows=15 shrinks=9
+burst 14 array_size=1024 grows=16 shrinks=10
+burst 15 array_size=1024 grows=17 shrinks=11
+burst 16 array_size=512 grows=18 shrinks=13
+burst 17 array_size=512 grows=20 shrinks=15
+burst 18 array_size=1024 grows=22 shrinks=16
+burst 19 array_size=2048 grows=23 shrinks=16
+Owner loop took 13269 us (0.331725 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=512 grows=7 shrinks=2
+burst 1 array_size=512 grows=9 shrinks=4
+burst 2 array_size=2048 grows=11 shrinks=4
+burst 3 array_size=1024 grows=11 shrinks=5
+burst 4 array_size=512 grows=12 shrinks=7
+burst 5 array_size=512 grows=14 shrinks=9
+burst 6 array_size=1024 grows=16 shrinks=10
+burst 7 array_size=1024 grows=17 shrinks=11
+burst 8 array_size=1024 grows=18 shrinks=12
+burst 9 array_size=512 grows=18 shrinks=13
+burst 10 array_size=256 grows=20 shrinks=16
+burst 11 array_size=256 grows=22 shrinks=18
+burst 12 array_size=1024 grows=25 shrinks=19
+burst 13 array_size=512 grows=26 shrinks=21
+burst 14 array_size=2048 grows=28 shrinks=21
+burst 15 array_size=2048 grows=28 shrinks=21
+burst 16 array_size=1024 grows=28 shrinks=22
+burst 17 array_size=2048 grows=29 shrinks=22
+burst 18 array_size=2048 grows=29 shrinks=22
+burst 19 array_size=1024 grows=29 shrinks=23
+Owner loop took 8014 us (0.20035 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=1024 grows=7 shrinks=1
+burst 1 array_size=2048 grows=8 shrinks=1
+burst 2 array_size=512 grows=8 shrinks=3
+burst 3 array_size=512 grows=10 shrinks=5
+burst 4 array_size=512 grows=12 shrinks=7
+burst 5 array_size=512 grows=14 shrinks=9
+burst 6 array_size=2048 grows=16 shrinks=9
+burst 7 array_size=2048 grows=16 shrinks=9
+burst 8 array_size=1024 grows=16 shrinks=10
+burst 9 array_size=2048 grows=17 shrinks=10
+burst 10 array_size=2048 grows=17 shrinks=10
+burst 11 array_size=1024 grows=17 shrinks=11
+burst 12 array_size=2048 grows=18 shrinks=11
+burst 13 array_size=2048 grows=18 shrinks=11
+burst 14 array_size=2048 grows=18 shrinks=11
+burst 15 array_size=2048 grows=18 shrinks=11
+burst 16 array_size=1024 grows=18 shrinks=12
+burst 17 array_size=2048 grows=19 shrinks=12
+burst 18 array_size=1024 grows=19 shrinks=13
+burst 19 array_size=2048 grows=20 shrinks=13
+Owner loop took 8517 us (0.212925 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=64 grows=7 shrinks=5
+burst 1 array_size=1024 grows=12 shrinks=6
+burst 2 array_size=256 grows=13 shrinks=9
+burst 3 array_size=256 grows=16 shrinks=12
+burst 4 array_size=2048 grows=19 shrinks=12
+burst 5 array_size=1024 grows=19 shrinks=13
+burst 6 array_size=2048 grows=20 shrinks=13
+burst 7 array_size=1024 grows=20 shrinks=14
+burst 8 array_size=512 grows=21 shrinks=16
+burst 9 array_size=2048 grows=23 shrinks=16
+burst 10 array_size=2048 grows=23 shrinks=16
+burst 11 array_size=2048 grows=23 shrinks=16
+burst 12 array_size=2048 grows=23 shrinks=16
+burst 13 array_size=1024 grows=23 shrinks=17
+burst 14 array_size=512 grows=24 shrinks=19
+burst 15 array_size=2048 grows=26 shrinks=19
+burst 16 array_size=1024 grows=26 shrinks=20
+burst 17 array_size=512 grows=27 shrinks=22
+burst 18 array_size=1024 grows=28 shrinks=22
+burst 19 array_size=2048 grows=29 shrinks=22
+Owner loop took 7989 us (0.199725 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=1024 grows=7 shrinks=1
+burst 1 array_size=512 grows=8 shrinks=3
+burst 2 array_size=1024 grows=10 shrinks=4
+burst 3 array_size=2048 grows=11 shrinks=4
+burst 4 array_size=1024 grows=11 shrinks=5
+burst 5 array_size=2048 grows=12 shrinks=5
+burst 6 array_size=1024 grows=12 shrinks=6
+burst 7 array_size=512 grows=13 shrinks=8
+burst 8 array_size=1024 grows=15 shrinks=9
+burst 9 array_size=2048 grows=16 shrinks=9
+burst 10 array_size=2048 grows=16 shrinks=9
+burst 11 array_size=1024 grows=16 shrinks=10
+burst 12 array_size=2048 grows=17 shrinks=10
+burst 13 array_size=1024 grows=17 shrinks=11
+burst 14 array_size=512 grows=18 shrinks=13
+burst 15 array_size=2048 grows=20 shrinks=13
+burst 16 array_size=2048 grows=20 shrinks=13
+burst 17 array_size=2048 grows=20 shrinks=13
+burst 18 array_size=1024 grows=20 shrinks=14
+burst 19 array_size=512 grows=21 shrinks=16
+Owner loop took 8062 us (0.20155 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=2048 grows=7 shrinks=0
+burst 1 array_size=1024 grows=7 shrinks=1
+burst 2 array_size=2048 grows=8 shrinks=1
+burst 3 array_size=1024 grows=8 shrinks=2
+burst 4 array_size=512 grows=9 shrinks=4
+burst 5 array_size=2048 grows=11 shrinks=4
+burst 6 array_size=512 grows=11 shrinks=6
+burst 7 array_size=256 grows=13 shrinks=9
+burst 8 array_size=2048 grows=16 shrinks=9
+burst 9 array_size=1024 grows=16 shrinks=10
+burst 10 array_size=512 grows=17 shrinks=12
+burst 11 array_size=1024 grows=18 shrinks=12
+burst 12 array_size=512 grows=19 shrinks=14
+burst 13 array_size=512 grows=21 shrinks=16
+burst 14 array_size=2048 grows=23 shrinks=16
+burst 15 array_size=1024 grows=23 shrinks=17
+burst 16 array_size=1024 grows=24 shrinks=18
+burst 17 array_size=512 grows=25 shrinks=20
+burst 18 array_size=512 grows=26 shrinks=21
+burst 19 array_size=2048 grows=28 shrinks=21
+Owner loop took 8403 us (0.210075 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=2048 grows=7 shrinks=0
+burst 1 array_size=1024 grows=7 shrinks=1
+burst 2 array_size=2048 grows=8 shrinks=1
+burst 3 array_size=2048 grows=8 shrinks=1
+burst 4 array_size=2048 grows=8 shrinks=1
+burst 5 array_size=2048 grows=8 shrinks=1
+burst 6 array_size=1024 grows=8 shrinks=2
+burst 7 array_size=512 grows=9 shrinks=4
+burst 8 array_size=2048 grows=11 shrinks=4
+burst 9 array_size=1024 grows=11 shrinks=5
+burst 10 array_size=512 grows=12 shrinks=7
+burst 11 array_size=512 grows=14 shrinks=9
+burst 12 array_size=512 grows=16 shrinks=11
+burst 13 array_size=512 grows=18 shrinks=13
+burst 14 array_size=2048 grows=20 shrinks=13
+burst 15 array_size=1024 grows=20 shrinks=14
+burst 16 array_size=2048 grows=21 shrinks=14
+burst 17 array_size=1024 grows=21 shrinks=15
+burst 18 array_size=256 grows=22 shrinks=18
+burst 19 array_size=1024 grows=25 shrinks=19
+Owner loop took 9529 us (0.238225 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=2048 grows=7 shrinks=0
+burst 1 array_size=1024 grows=7 shrinks=1
+burst 2 array_size=512 grows=8 shrinks=3
+burst 3 array_size=512 grows=10 shrinks=5
+burst 4 array_size=256 grows=12 shrinks=8
+burst 5 array_size=512 grows=15 shrinks=10
+burst 6 array_size=2048 grows=17 shrinks=10
+burst 7 array_size=1024 grows=17 shrinks=11
+burst 8 array_size=512 grows=18 shrinks=13
+burst 9 array_size=512 grows=20 shrinks=15
+burst 10 array_size=64 grows=21 shrinks=19
+burst 11 array_size=512 grows=25 shrinks=20
+burst 12 array_size=2048 grows=27 shrinks=20
+burst 13 array_size=1024 grows=27 shrinks=21
+burst 14 array_size=512 grows=28 shrinks=23
+burst 15 array_size=256 grows=30 shrinks=26
+burst 16 array_size=1024 grows=33 shrinks=27
+burst 17 array_size=512 grows=34 shrinks=29
+burst 18 array_size=2048 grows=36 shrinks=29
+burst 19 array_size=1024 grows=36 shrinks=30
+Owner loop took 8247 us (0.206175 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=512 grows=7 shrinks=2
+burst 1 array_size=512 grows=9 shrinks=4
+burst 2 array_size=1024 grows=11 shrinks=5
+burst 3 array_size=512 grows=12 shrinks=7
+burst 4 array_size=256 grows=14 shrinks=10
+burst 5 array_size=2048 grows=17 shrinks=10
+burst 6 array_size=2048 grows=17 shrinks=10
+burst 7 array_size=1024 grows=17 shrinks=11
+burst 8 array_size=512 grows=18 shrinks=13
+burst 9 array_size=2048 grows=20 shrinks=13
+burst 10 array_size=2048 grows=20 shrinks=13
+burst 11 array_size=1024 grows=20 shrinks=14
+burst 12 array_size=1024 grows=21 shrinks=15
+burst 13 array_size=2048 grows=22 shrinks=15
+burst 14 array_size=2048 grows=22 shrinks=15
+burst 15 array_size=2048 grows=22 shrinks=15
+burst 16 array_size=2048 grows=22 shrinks=15
+burst 17 array_size=2048 grows=22 shrinks=15
+burst 18 array_size=2048 grows=22 shrinks=15
+burst 19 array_size=2048 grows=22 shrinks=15
+Owner loop took 8857 us (0.221425 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=1024 grows=7 shrinks=1
+burst 1 array_size=512 grows=8 shrinks=3
+burst 2 array_size=2048 grows=10 shrinks=3
+burst 3 array_size=1024 grows=10 shrinks=4
+burst 4 array_size=2048 grows=11 shrinks=4
+burst 5 array_size=2048 grows=11 shrinks=4
+burst 6 array_size=2048 grows=11 shrinks=4
+burst 7 array_size=1024 grows=11 shrinks=5
+burst 8 array_size=512 grows=12 shrinks=7
+burst 9 array_size=2048 grows=14 shrinks=7
+burst 10 array_size=2048 grows=14 shrinks=7
+burst 11 array_size=1024 grows=14 shrinks=8
+burst 12 array_size=512 grows=15 shrinks=10
+burst 13 array_size=2048 grows=17 shrinks=10
+burst 14 array_size=1024 grows=17 shrinks=11
+burst 15 array_size=512 grows=18 shrinks=13
+burst 16 array_size=2048 grows=20 shrinks=13
+burst 17 array_size=512 grows=20 shrinks=15
+burst 18 array_size=2048 grows=22 shrinks=15
+burst 19 array_size=512 grows=22 shrinks=17
+Owner loop took 7987 us (0.199675 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=512 grows=7 shrinks=2
+burst 1 array_size=512 grows=9 shrinks=4
+burst 2 array_size=2048 grows=11 shrinks=4
+burst 3 array_size=1024 grows=11 shrinks=5
+burst 4 array_size=2048 grows=12 shrinks=5
+burst 5 array_size=2048 grows=12 shrinks=5
+burst 6 array_size=1024 grows=12 shrinks=6
+burst 7 array_size=1024 grows=13 shrinks=7
+burst 8 array_size=2048 grows=14 shrinks=7
+burst 9 array_size=2048 grows=14 shrinks=7
+burst 10 array_size=2048 grows=14 shrinks=7
+burst 11 array_size=2048 grows=14 shrinks=7
+burst 12 array_size=1024 grows=14 shrinks=8
+burst 13 array_size=512 grows=15 shrinks=10
+burst 14 array_size=1024 grows=17 shrinks=11
+burst 15 array_size=512 grows=18 shrinks=13
+burst 16 array_size=2048 grows=20 shrinks=13
+burst 17 array_size=2048 grows=20 shrinks=13
+burst 18 array_size=2048 grows=20 shrinks=13
+burst 19 array_size=1024 grows=20 shrinks=14
+Owner loop took 10477 us (0.261925 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=2048 grows=7 shrinks=0
+burst 1 array_size=1024 grows=7 shrinks=1
+burst 2 array_size=512 grows=8 shrinks=3
+burst 3 array_size=512 grows=10 shrinks=5
+burst 4 array_size=256 grows=12 shrinks=8
+burst 5 array_size=256 grows=14 shrinks=10
+burst 6 array_size=512 grows=17 shrinks=12
+burst 7 array_size=512 grows=19 shrinks=14
+burst 8 array_size=1024 grows=21 shrinks=15
+burst 9 array_size=1024 grows=22 shrinks=16
+burst 10 array_size=512 grows=23 shrinks=18
+burst 11 array_size=512 grows=25 shrinks=20
+burst 12 array_size=1024 grows=27 shrinks=21
+burst 13 array_size=2048 grows=28 shrinks=21
+burst 14 array_size=2048 grows=28 shrinks=21
+burst 15 array_size=1024 grows=28 shrinks=22
+burst 16 array_size=2048 grows=29 shrinks=22
+burst 17 array_size=1024 grows=29 shrinks=23
+burst 18 array_size=512 grows=30 shrinks=25
+burst 19 array_size=1024 grows=32 shrinks=26
+Owner loop took 8471 us (0.211775 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=2048 grows=7 shrinks=0
+burst 1 array_size=1024 grows=7 shrinks=1
+burst 2 array_size=2048 grows=8 shrinks=1
+burst 3 array_size=2048 grows=8 shrinks=1
+burst 4 array_size=2048 grows=8 shrinks=1
+burst 5 array_size=2048 grows=8 shrinks=1
+burst 6 array_size=2048 grows=8 shrinks=1
+burst 7 array_size=2048 grows=8 shrinks=1
+burst 8 array_size=1024 grows=8 shrinks=2
+burst 9 array_size=512 grows=9 shrinks=4
+burst 10 array_size=256 grows=11 shrinks=7
+burst 11 array_size=2048 grows=14 shrinks=7
+burst 12 array_size=1024 grows=14 shrinks=8
+burst 13 array_size=1024 grows=15 shrinks=9
+burst 14 array_size=2048 grows=16 shrinks=9
+burst 15 array_size=1024 grows=16 shrinks=10
+burst 16 array_size=512 grows=17 shrinks=12
+burst 17 array_size=256 grows=18 shrinks=14
+burst 18 array_size=1024 grows=21 shrinks=15
+burst 19 array_size=1024 grows=22 shrinks=16
+Owner loop took 9207 us (0.230175 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=512 grows=7 shrinks=2
+burst 1 array_size=1024 grows=9 shrinks=3
+burst 2 array_size=1024 grows=10 shrinks=4
+burst 3 array_size=2048 grows=11 shrinks=4
+burst 4 array_size=2048 grows=11 shrinks=4
+burst 5 array_size=1024 grows=11 shrinks=5
+burst 6 array_size=1024 grows=11 shrinks=5
+burst 7 array_size=512 grows=12 shrinks=7
+burst 8 array_size=2048 grows=14 shrinks=7
+burst 9 array_size=1024 grows=14 shrinks=8
+burst 10 array_size=2048 grows=15 shrinks=8
+burst 11 array_size=2048 grows=15 shrinks=8
+burst 12 array_size=1024 grows=15 shrinks=9
+burst 13 array_size=2048 grows=16 shrinks=9
+burst 14 array_size=2048 grows=16 shrinks=9
+burst 15 array_size=1024 grows=16 shrinks=10
+burst 16 array_size=512 grows=17 shrinks=12
+burst 17 array_size=2048 grows=19 shrinks=12
+burst 18 array_size=2048 grows=19 shrinks=12
+burst 19 array_size=2048 grows=19 shrinks=12
+Owner loop took 19064 us (0.4766 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=512 grows=7 shrinks=2
+burst 1 array_size=512 grows=9 shrinks=4
+burst 2 array_size=2048 grows=11 shrinks=4
+burst 3 array_size=1024 grows=11 shrinks=5
+burst 4 array_size=512 grows=12 shrinks=7
+burst 5 array_size=2048 grows=14 shrinks=7
+burst 6 array_size=2048 grows=14 shrinks=7
+burst 7 array_size=1024 grows=14 shrinks=8
+burst 8 array_size=1024 grows=15 shrinks=9
+burst 9 array_size=512 grows=16 shrinks=11
+burst 10 array_size=512 grows=18 shrinks=13
+burst 11 array_size=2048 grows=20 shrinks=13
+burst 12 array_size=1024 grows=20 shrinks=14
+burst 13 array_size=1024 grows=21 shrinks=15
+burst 14 array_size=512 grows=22 shrinks=17
+burst 15 array_size=512 grows=24 shrinks=19
+burst 16 array_size=2048 grows=26 shrinks=19
+burst 17 array_size=1024 grows=26 shrinks=20
+burst 18 array_size=2048 grows=27 shrinks=20
+burst 19 array_size=1024 grows=27 shrinks=21
+Owner loop took 9387 us (0.234675 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=2048 grows=7 shrinks=0
+burst 1 array_size=1024 grows=7 shrinks=1
+burst 2 array_size=512 grows=8 shrinks=3
+burst 3 array_size=512 grows=10 shrinks=5
+burst 4 array_size=512 grows=12 shrinks=7
+burst 5 array_size=2048 grows=14 shrinks=7
+burst 6 array_size=2048 grows=14 shrinks=7
+burst 7 array_size=1024 grows=14 shrinks=8
+burst 8 array_size=2048 grows=15 shrinks=8
+burst 9 array_size=1024 grows=15 shrinks=9
+burst 10 array_size=512 grows=16 shrinks=11
+burst 11 array_size=512 grows=17 shrinks=12
+burst 12 array_size=2048 grows=19 shrinks=12
+burst 13 array_size=2048 grows=19 shrinks=12
+burst 14 array_size=2048 grows=19 shrinks=12
+burst 15 array_size=1024 grows=19 shrinks=13
+burst 16 array_size=2048 grows=20 shrinks=13
+burst 17 array_size=512 grows=20 shrinks=15
+burst 18 array_size=1024 grows=22 shrinks=16
+burst 19 array_size=256 grows=23 shrinks=19
+Owner loop took 9580 us (0.2395 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=2048 grows=7 shrinks=0
+burst 1 array_size=1024 grows=7 shrinks=1
+burst 2 array_size=512 grows=8 shrinks=3
+burst 3 array_size=2048 grows=10 shrinks=3
+burst 4 array_size=2048 grows=10 shrinks=3
+burst 5 array_size=2048 grows=10 shrinks=3
+burst 6 array_size=2048 grows=10 shrinks=3
+burst 7 array_size=1024 grows=10 shrinks=4
+burst 8 array_size=1024 grows=11 shrinks=5
+burst 9 array_size=512 grows=12 shrinks=7
+burst 10 array_size=512 grows=14 shrinks=9
+burst 11 array_size=512 grows=15 shrinks=10
+burst 12 array_size=2048 grows=17 shrinks=10
+burst 13 array_size=2048 grows=17 shrinks=10
+burst 14 array_size=1024 grows=17 shrinks=11
+burst 15 array_size=512 grows=18 shrinks=13
+burst 16 array_size=2048 grows=20 shrinks=13
+burst 17 array_size=1024 grows=20 shrinks=14
+burst 18 array_size=2048 grows=21 shrinks=14
+burst 19 array_size=512 grows=21 shrinks=16
+Owner loop took 8569 us (0.214225 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=64 grows=7 shrinks=5
+burst 1 array_size=1024 grows=12 shrinks=6
+burst 2 array_size=512 grows=13 shrinks=8
+burst 3 array_size=256 grows=15 shrinks=11
+burst 4 array_size=512 grows=18 shrinks=13
+burst 5 array_size=1024 grows=19 shrinks=13
+burst 6 array_size=2048 grows=20 shrinks=13
+burst 7 array_size=1024 grows=20 shrinks=14
+burst 8 array_size=2048 grows=21 shrinks=14
+burst 9 array_size=2048 grows=21 shrinks=14
+burst 10 array_size=1024 grows=21 shrinks=15
+burst 11 array_size=2048 grows=22 shrinks=15
+burst 12 array_size=1024 grows=22 shrinks=16
+burst 13 array_size=512 grows=23 shrinks=18
+burst 14 array_size=512 grows=25 shrinks=20
+burst 15 array_size=2048 grows=27 shrinks=20
+burst 16 array_size=2048 grows=27 shrinks=20
+burst 17 array_size=1024 grows=27 shrinks=21
+burst 18 array_size=512 grows=28 shrinks=23
+burst 19 array_size=512 grows=30 shrinks=25
+Owner loop took 8702 us (0.21755 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=1024 grows=7 shrinks=1
+burst 1 array_size=512 grows=8 shrinks=3
+burst 2 array_size=2048 grows=10 shrinks=3
+burst 3 array_size=1024 grows=10 shrinks=4
+burst 4 array_size=2048 grows=11 shrinks=4
+burst 5 array_size=2048 grows=11 shrinks=4
+burst 6 array_size=1024 grows=11 shrinks=5
+burst 7 array_size=1024 grows=12 shrinks=6
+burst 8 array_size=1024 grows=13 shrinks=7
+burst 9 array_size=512 grows=14 shrinks=9
+burst 10 array_size=2048 grows=16 shrinks=9
+burst 11 array_size=1024 grows=16 shrinks=10
+burst 12 array_size=1024 grows=17 shrinks=11
+burst 13 array_size=1024 grows=18 shrinks=12
+burst 14 array_size=1024 grows=19 shrinks=13
+burst 15 array_size=2048 grows=20 shrinks=13
+burst 16 array_size=1024 grows=20 shrinks=14
+burst 17 array_size=2048 grows=21 shrinks=14
+burst 18 array_size=2048 grows=21 shrinks=14
+burst 19 array_size=2048 grows=21 shrinks=14
+Owner loop took 8498 us (0.21245 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=2048 grows=7 shrinks=0
+burst 1 array_size=1024 grows=7 shrinks=1
+burst 2 array_size=512 grows=8 shrinks=3
+burst 3 array_size=1024 grows=9 shrinks=3
+burst 4 array_size=2048 grows=10 shrinks=3
+burst 5 array_size=1024 grows=10 shrinks=4
+burst 6 array_size=2048 grows=11 shrinks=4
+burst 7 array_size=1024 grows=11 shrinks=5
+burst 8 array_size=2048 grows=12 shrinks=5
+burst 9 array_size=1024 grows=12 shrinks=6
+burst 10 array_size=2048 grows=13 shrinks=6
+burst 11 array_size=1024 grows=13 shrinks=7
+burst 12 array_size=1024 grows=14 shrinks=8
+burst 13 array_size=512 grows=15 shrinks=10
+burst 14 array_size=2048 grows=17 shrinks=10
+burst 15 array_size=2048 grows=17 shrinks=10
+burst 16 array_size=2048 grows=17 shrinks=10
+burst 17 array_size=1024 grows=17 shrinks=11
+burst 18 array_size=2048 grows=18 shrinks=11
+burst 19 array_size=2048 grows=18 shrinks=11
+Owner loop took 12548 us (0.3137 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=2048 grows=7 shrinks=0
+burst 1 array_size=2048 grows=7 shrinks=0
+burst 2 array_size=2048 grows=7 shrinks=0
+burst 3 array_size=1024 grows=7 shrinks=1
+burst 4 array_size=512 grows=8 shrinks=3
+burst 5 array_size=2048 grows=10 shrinks=3
+burst 6 array_size=1024 grows=10 shrinks=4
+burst 7 array_size=1024 grows=11 shrinks=5
+burst 8 array_size=512 grows=12 shrinks=7
+burst 9 array_size=512 grows=14 shrinks=9
+burst 10 array_size=256 grows=16 shrinks=12
+burst 11 array_size=1024 grows=18 shrinks=12
+burst 12 array_size=512 grows=19 shrinks=14
+burst 13 array_size=1024 grows=20 shrinks=14
+burst 14 array_size=2048 grows=21 shrinks=14
+burst 15 array_size=2048 grows=21 shrinks=14
+burst 16 array_size=1024 grows=21 shrinks=15
+burst 17 array_size=1024 grows=22 shrinks=16
+burst 18 array_size=2048 grows=23 shrinks=16
+burst 19 array_size=2048 grows=23 shrinks=16
+Owner loop took 8499 us (0.212475 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=1024 grows=7 shrinks=1
+burst 1 array_size=512 grows=8 shrinks=3
+burst 2 array_size=512 grows=10 shrinks=5
+burst 3 array_size=512 grows=12 shrinks=7
+burst 4 array_size=2048 grows=14 shrinks=7
+burst 5 array_size=1024 grows=14 shrinks=8
+burst 6 array_size=2048 grows=15 shrinks=8
+burst 7 array_size=1024 grows=15 shrinks=9
+burst 8 array_size=512 grows=16 shrinks=11
+burst 9 array_size=1024 grows=18 shrinks=12
+burst 10 array_size=2048 grows=19 shrinks=12
+burst 11 array_size=2048 grows=19 shrinks=12
+burst 12 array_size=2048 grows=19 shrinks=12
+burst 13 array_size=2048 grows=19 shrinks=12
+burst 14 array_size=2048 grows=19 shrinks=12
+burst 15 array_size=1024 grows=19 shrinks=13
+burst 16 array_size=2048 grows=20 shrinks=13
+burst 17 array_size=1024 grows=20 shrinks=14
+burst 18 array_size=512 grows=21 shrinks=16
+burst 19 array_size=2048 grows=23 shrinks=16
+Owner loop took 8532 us (0.2133 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=2048 grows=7 shrinks=0
+burst 1 array_size=1024 grows=7 shrinks=1
+burst 2 array_size=512 grows=8 shrinks=3
+burst 3 array_size=512 grows=10 shrinks=5
+burst 4 array_size=512 grows=12 shrinks=7
+burst 5 array_size=1024 grows=14 shrinks=8
+burst 6 array_size=1024 grows=15 shrinks=9
+burst 7 array_size=512 grows=16 shrinks=11
+burst 8 array_size=2048 grows=18 shrinks=11
+burst 9 array_size=1024 grows=18 shrinks=12
+burst 10 array_size=512 grows=19 shrinks=14
+burst 11 array_size=2048 grows=21 shrinks=14
+burst 12 array_size=1024 grows=21 shrinks=15
+burst 13 array_size=2048 grows=22 shrinks=15
+burst 14 array_size=1024 grows=22 shrinks=16
+burst 15 array_size=512 grows=23 shrinks=18
+burst 16 array_size=2048 grows=25 shrinks=18
+burst 17 array_size=512 grows=25 shrinks=20
+burst 18 array_size=1024 grows=26 shrinks=20
+burst 19 array_size=512 grows=27 shrinks=22
+Owner loop took 14927 us (0.373175 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=512 grows=7 shrinks=2
+burst 1 array_size=512 grows=9 shrinks=4
+burst 2 array_size=2048 grows=11 shrinks=4
+burst 3 array_size=1024 grows=11 shrinks=5
+burst 4 array_size=1024 grows=12 shrinks=6
+burst 5 array_size=2048 grows=13 shrinks=6
+burst 6 array_size=1024 grows=13 shrinks=7
+burst 7 array_size=512 grows=14 shrinks=9
+burst 8 array_size=256 grows=16 shrinks=12
+burst 9 array_size=256 grows=19 shrinks=15
+burst 10 array_size=128 grows=22 shrinks=19
+burst 11 array_size=1024 grows=25 shrinks=19
+burst 12 array_size=512 grows=26 shrinks=21
+burst 13 array_size=1024 grows=28 shrinks=22
+burst 14 array_size=512 grows=29 shrinks=24
+burst 15 array_size=1024 grows=31 shrinks=25
+burst 16 array_size=512 grows=32 shrinks=27
+burst 17 array_size=1024 grows=34 shrinks=28
+burst 18 array_size=1024 grows=35 shrinks=29
+burst 19 array_size=2048 grows=36 shrinks=29
+Owner loop took 8941 us (0.223525 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=1024 grows=7 shrinks=1
+burst 1 array_size=2048 grows=8 shrinks=1
+burst 2 array_size=512 grows=8 shrinks=3
+burst 3 array_size=512 grows=10 shrinks=5
+burst 4 array_size=256 grows=12 shrinks=8
+burst 5 array_size=2048 grows=15 shrinks=8
+burst 6 array_size=2048 grows=15 shrinks=8
+burst 7 array_size=2048 grows=15 shrinks=8
+burst 8 array_size=1024 grows=15 shrinks=9
+burst 9 array_size=512 grows=16 shrinks=11
+burst 10 array_size=1024 grows=17 shrinks=11
+burst 11 array_size=512 grows=18 shrinks=13
+burst 12 array_size=2048 grows=20 shrinks=13
+burst 13 array_size=1024 grows=20 shrinks=14
+burst 14 array_size=2048 grows=21 shrinks=14
+burst 15 array_size=2048 grows=21 shrinks=14
+burst 16 array_size=2048 grows=21 shrinks=14
+burst 17 array_size=1024 grows=21 shrinks=15
+burst 18 array_size=2048 grows=22 shrinks=15
+burst 19 array_size=2048 grows=22 shrinks=15
+Owner loop took 8135 us (0.203375 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=512 grows=7 shrinks=2
+burst 1 array_size=1024 grows=9 shrinks=3
+burst 2 array_size=1024 grows=10 shrinks=4
+burst 3 array_size=512 grows=11 shrinks=6
+burst 4 array_size=2048 grows=13 shrinks=6
+burst 5 array_size=1024 grows=13 shrinks=7
+burst 6 array_size=512 grows=14 shrinks=9
+burst 7 array_size=512 grows=16 shrinks=11
+burst 8 array_size=256 grows=18 shrinks=14
+burst 9 array_size=1024 grows=21 shrinks=15
+burst 10 array_size=1024 grows=22 shrinks=16
+burst 11 array_size=2048 grows=23 shrinks=16
+burst 12 array_size=1024 grows=23 shrinks=17
+burst 13 array_size=512 grows=24 shrinks=19
+burst 14 array_size=512 grows=26 shrinks=21
+burst 15 array_size=2048 grows=28 shrinks=21
+burst 16 array_size=1024 grows=28 shrinks=22
+burst 17 array_size=512 grows=29 shrinks=24
+burst 18 array_size=512 grows=31 shrinks=26
+burst 19 array_size=256 grows=32 shrinks=28
+Owner loop took 9435 us (0.235875 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=2048 grows=7 shrinks=0
+burst 1 array_size=2048 grows=7 shrinks=0
+burst 2 array_size=2048 grows=7 shrinks=0
+burst 3 array_size=2048 grows=7 shrinks=0
+burst 4 array_size=2048 grows=7 shrinks=0
+burst 5 array_size=2048 grows=7 shrinks=0
+burst 6 array_size=1024 grows=7 shrinks=1
+burst 7 array_size=1024 grows=8 shrinks=2
+burst 8 array_size=2048 grows=9 shrinks=2
+burst 9 array_size=512 grows=9 shrinks=4
+burst 10 array_size=1024 grows=10 shrinks=4
+burst 11 array_size=1024 grows=11 shrinks=5
+burst 12 array_size=2048 grows=12 shrinks=5
+burst 13 array_size=1024 grows=12 shrinks=6
+burst 14 array_size=512 grows=13 shrinks=8
+burst 15 array_size=2048 grows=15 shrinks=8
+burst 16 array_size=2048 grows=15 shrinks=8
+burst 17 array_size=1024 grows=15 shrinks=9
+burst 18 array_size=1024 grows=16 shrinks=10
+burst 19 array_size=2048 grows=17 shrinks=10
+Owner loop took 13533 us (0.338325 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=2048 grows=7 shrinks=0
+burst 1 array_size=1024 grows=7 shrinks=1
+burst 2 array_size=2048 grows=8 shrinks=1
+burst 3 array_size=1024 grows=8 shrinks=2
+burst 4 array_size=2048 grows=9 shrinks=2
+burst 5 array_size=2048 grows=9 shrinks=2
+burst 6 array_size=2048 grows=9 shrinks=2
+burst 7 array_size=2048 grows=9 shrinks=2
+burst 8 array_size=1024 grows=9 shrinks=3
+burst 9 array_size=512 grows=10 shrinks=5
+burst 10 array_size=2048 grows=12 shrinks=5
+burst 11 array_size=2048 grows=12 shrinks=5
+burst 12 array_size=1024 grows=12 shrinks=6
+burst 13 array_size=2048 grows=13 shrinks=6
+burst 14 array_size=2048 grows=13 shrinks=6
+burst 15 array_size=2048 grows=13 shrinks=6
+burst 16 array_size=2048 grows=13 shrinks=6
+burst 17 array_size=1024 grows=13 shrinks=7
+burst 18 array_size=2048 grows=14 shrinks=7
+burst 19 array_size=512 grows=14 shrinks=9
+Owner loop took 11484 us (0.2871 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=1024 grows=7 shrinks=1
+burst 1 array_size=512 grows=8 shrinks=3
+burst 2 array_size=2048 grows=10 shrinks=3
+burst 3 array_size=2048 grows=10 shrinks=3
+burst 4 array_size=1024 grows=10 shrinks=4
+burst 5 array_size=2048 grows=11 shrinks=4
+burst 6 array_size=1024 grows=11 shrinks=5
+burst 7 array_size=2048 grows=12 shrinks=5
+burst 8 array_size=2048 grows=12 shrinks=5
+burst 9 array_size=1024 grows=12 shrinks=6
+burst 10 array_size=512 grows=13 shrinks=8
+burst 11 array_size=512 grows=14 shrinks=9
+burst 12 array_size=256 grows=16 shrinks=12
+burst 13 array_size=512 grows=19 shrinks=14
+burst 14 array_size=2048 grows=21 shrinks=14
+burst 15 array_size=512 grows=21 shrinks=16
+burst 16 array_size=2048 grows=23 shrinks=16
+burst 17 array_size=1024 grows=23 shrinks=17
+burst 18 array_size=2048 grows=24 shrinks=17
+burst 19 array_size=2048 grows=24 shrinks=17
+Owner loop took 10169 us (0.254225 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=1024 grows=7 shrinks=1
+burst 1 array_size=512 grows=8 shrinks=3
+burst 2 array_size=2048 grows=10 shrinks=3
+burst 3 array_size=1024 grows=10 shrinks=4
+burst 4 array_size=512 grows=11 shrinks=6
+burst 5 array_size=2048 grows=13 shrinks=6
+burst 6 array_size=2048 grows=13 shrinks=6
+burst 7 array_size=1024 grows=13 shrinks=7
+burst 8 array_size=1024 grows=14 shrinks=8
+burst 9 array_size=2048 grows=15 shrinks=8
+burst 10 array_size=2048 grows=15 shrinks=8
+burst 11 array_size=1024 grows=15 shrinks=9
+burst 12 array_size=2048 grows=16 shrinks=9
+burst 13 array_size=2048 grows=16 shrinks=9
+burst 14 array_size=512 grows=16 shrinks=11
+burst 15 array_size=2048 grows=18 shrinks=11
+burst 16 array_size=2048 grows=18 shrinks=11
+burst 17 array_size=2048 grows=18 shrinks=11
+burst 18 array_size=1024 grows=18 shrinks=12
+burst 19 array_size=1024 grows=19 shrinks=13
+Owner loop took 9144 us (0.2286 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=1024 grows=7 shrinks=1
+burst 1 array_size=512 grows=8 shrinks=3
+burst 2 array_size=2048 grows=10 shrinks=3
+burst 3 array_size=1024 grows=10 shrinks=4
+burst 4 array_size=2048 grows=11 shrinks=4
+burst 5 array_size=512 grows=11 shrinks=6
+burst 6 array_size=2048 grows=13 shrinks=6
+burst 7 array_size=1024 grows=13 shrinks=7
+burst 8 array_size=1024 grows=14 shrinks=8
+burst 9 array_size=512 grows=15 shrinks=10
+burst 10 array_size=1024 grows=17 shrinks=11
+burst 11 array_size=1024 grows=18 shrinks=12
+burst 12 array_size=2048 grows=19 shrinks=12
+burst 13 array_size=2048 grows=19 shrinks=12
+burst 14 array_size=2048 grows=19 shrinks=12
+burst 15 array_size=1024 grows=19 shrinks=13
+burst 16 array_size=512 grows=20 shrinks=15
+burst 17 array_size=2048 grows=22 shrinks=15
+burst 18 array_size=1024 grows=22 shrinks=16
+burst 19 array_size=512 grows=23 shrinks=18
+Owner loop took 8753 us (0.218825 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=128 grows=7 shrinks=4
+burst 1 array_size=512 grows=11 shrinks=6
+burst 2 array_size=1024 grows=13 shrinks=7
+burst 3 array_size=512 grows=14 shrinks=9
+burst 4 array_size=1024 grows=16 shrinks=10
+burst 5 array_size=2048 grows=17 shrinks=10
+burst 6 array_size=1024 grows=17 shrinks=11
+burst 7 array_size=2048 grows=18 shrinks=11
+burst 8 array_size=512 grows=18 shrinks=13
+burst 9 array_size=1024 grows=20 shrinks=14
+burst 10 array_size=512 grows=21 shrinks=16
+burst 11 array_size=2048 grows=23 shrinks=16
+burst 12 array_size=2048 grows=23 shrinks=16
+burst 13 array_size=1024 grows=23 shrinks=17
+burst 14 array_size=2048 grows=24 shrinks=17
+burst 15 array_size=1024 grows=24 shrinks=18
+burst 16 array_size=512 grows=25 shrinks=20
+burst 17 array_size=2048 grows=27 shrinks=20
+burst 18 array_size=512 grows=27 shrinks=22
+burst 19 array_size=256 grows=29 shrinks=25
+Owner loop took 8953 us (0.223825 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=512 grows=7 shrinks=2
+burst 1 array_size=1024 grows=9 shrinks=3
+burst 2 array_size=512 grows=10 shrinks=5
+burst 3 array_size=2048 grows=12 shrinks=5
+burst 4 array_size=512 grows=12 shrinks=7
+burst 5 array_size=512 grows=14 shrinks=9
+burst 6 array_size=2048 grows=16 shrinks=9
+burst 7 array_size=2048 grows=16 shrinks=9
+burst 8 array_size=1024 grows=16 shrinks=10
+burst 9 array_size=2048 grows=17 shrinks=10
+burst 10 array_size=1024 grows=17 shrinks=11
+burst 11 array_size=1024 grows=18 shrinks=12
+burst 12 array_size=512 grows=19 shrinks=14
+burst 13 array_size=2048 grows=21 shrinks=14
+burst 14 array_size=2048 grows=21 shrinks=14
+burst 15 array_size=2048 grows=21 shrinks=14
+burst 16 array_size=2048 grows=21 shrinks=14
+burst 17 array_size=2048 grows=21 shrinks=14
+burst 18 array_size=2048 grows=21 shrinks=14
+burst 19 array_size=1024 grows=21 shrinks=15
+Owner loop took 8647 us (0.216175 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
+burst 0 array_size=2048 grows=7 shrinks=0
+burst 1 array_size=2048 grows=7 shrinks=0
+burst 2 array_size=1024 grows=7 shrinks=1
+burst 3 array_size=512 grows=8 shrinks=3
+burst 4 array_size=2048 grows=10 shrinks=3
+burst 5 array_size=2048 grows=10 shrinks=3
+burst 6 array_size=2048 grows=10 shrinks=3
+burst 7 array_size=1024 grows=10 shrinks=4
+burst 8 array_size=512 grows=11 shrinks=6
+burst 9 array_size=1024 grows=13 shrinks=7
+burst 10 array_size=512 grows=14 shrinks=9
+burst 11 array_size=512 grows=16 shrinks=11
+burst 12 array_size=256 grows=17 shrinks=13
+burst 13 array_size=1024 grows=20 shrinks=14
+burst 14 array_size=512 grows=21 shrinks=16
+burst 15 array_size=512 grows=23 shrinks=18
+burst 16 array_size=512 grows=25 shrinks=20
+burst 17 array_size=1024 grows=26 shrinks=20
+burst 18 array_size=512 grows=27 shrinks=22
+burst 19 array_size=1024 grows=28 shrinks=22
+Owner loop took 23533 us (0.588325 us/task)
+received: 40000
+unique: 40000
+No duplicates
+missing count: 0
+
