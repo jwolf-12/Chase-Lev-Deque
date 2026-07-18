@@ -65,3 +65,71 @@ The most likely explaination: These benchmarks were run on WSL2 (Windows Subsyst
 In the initial implementation, when lastTop signaled that the array needed to grow, the code proceeded to grow it without first re-checking the actual, current value of top. In other words, it trusted the cached/stale lastTop value as sufficient justification to trigger a resize, rather than confirming against the real, up-to-date state of top before committing to that expensive operation.
 This mattered because lastTop could be out of date — the real top might have already changed (for example, due to concurrent access, prior operations, or timing) by the time the growth check ran. Since there was no verification step comparing lastTop against the true current top, the implementation ended up growing the array more often than necessary, including in cases where a fresh check would have shown that growth wasn't actually needed yet.
 Because array growth is a relatively expensive operation (allocating new memory, copying existing elements over, etc.), triggering it unnecessarily — or more frequently than required — introduced significant overhead. This unnecessary/excessive growing became a major performance bottleneck, resulting in the "huge grow overhead" observed.
+
+
+# Chase-Lev Deque: Shrink Logic — Memory Footprint Benchmark
+
+Unlike the `lastTop` caching optimization, shrinking is not a speed optimization —
+every shrink event costs real work (allocate a smaller array, copy live elements,
+perform the bottom/top-shift synchronization the paper proves safe against concurrent
+thieves, free the old buffer). The benefit is memory footprint, not throughput: an
+array that grows to accommodate a burst of work should give that memory back once the
+burst drains, rather than holding onto peak-sized memory forever.
+
+## Test setup
+
+- **Hardware**: WSL2 (Ubuntu), 16 logical cores
+- **Compiler**: g++, `-O2 -pthread`
+- **Workload**: an oscillating push/drain pattern — 20 bursts, each pushing 2,000
+  tasks then draining 1,900 via `popBottom` — with 4 thief threads also stealing
+  concurrently throughout. This exercises `perhapsShrink` repeatedly, unlike a
+  monotonic push test where the array only ever grows.
+- **Instrumentation**: `array_size`, `growCount`, and `shrinkCount` logged after every
+  burst
+- **Comparison**: same workload run once with shrink logic active, once with it
+  disabled (`perhapsShrink` as a no-op) — 30 runs each
+- **Correctness check**: every run verified 0 duplicates and 0 missing tasks
+
+## Result
+
+**Without shrink**: across all 30 runs, `array_size` reached 2048 early and stayed
+flat at 2048 for every remaining burst, with `shrinks=0` throughout, every single
+run — zero variance. Once the array grows to accommodate the peak backlog, that
+memory is held for the rest of the program's life regardless of how much the deque
+later drains.
+
+**With shrink**: `array_size` visibly oscillates in nearly every run — climbing to
+2048 during push bursts, dropping to 256–1024 (occasionally as low as 256) during
+drain phases, then climbing back on the next burst. `growCount` and `shrinkCount`
+climb together across bursts, roughly tracking each other, confirming the array is
+actively responding to the workload's shape rather than shrinking as a rare fluke.
+
+Example (single representative run, with shrink):
+```
+burst 0  array_size=2048 grows=7  shrinks=0
+burst 1  array_size=1024 grows=7  shrinks=1
+burst 2  array_size=2048 grows=8  shrinks=1
+burst 5  array_size=512  grows=9  shrinks=4
+burst 11 array_size=512  grows=10 shrinks=5
+burst 19 array_size=2048 grows=17 shrinks=10
+```
+Compare to any without-shrink run, which reads `array_size=2048` on every single
+line.
+
+**Speed**: median owner-loop time was in the same rough range for both
+configurations (~8,000–11,000 us for 40,000 total push+pop operations) — no
+measurable speed advantage either direction, consistent with the expectation that
+shrink trades a small per-event cost for memory reclamation rather than improving
+throughput.
+
+## Interpretation
+
+Peak memory usage is identical between the two versions (both reach 2048 slots
+during the burst). The difference is steady-state / average memory: the
+shrink-enabled version spends much of its time at a fraction of peak size, while the
+no-shrink version is permanently pinned at peak from the first burst onward. This is
+exactly the trade-off the paper motivates: for `n` concurrent deques sharing `m`
+total bytes of memory, a deque that never gives memory back after a burst wastes
+capacity that other deques might need during the same period — shrinking lets each
+deque's footprint track its actual current backlog instead of its historical peak.
+
