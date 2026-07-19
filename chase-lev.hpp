@@ -71,12 +71,14 @@ public:
         }
 
         a->put(b,task); 
+        atomic_thread_fence(memory_order_release);
         bottom.store(b+1,memory_order_release);
     }
 
     void steal(int& task){
 
         size_t t=top.load(memory_order_acquire);
+        atomic_thread_fence(memory_order_seq_cst);
         size_t b= bottom.load(memory_order_acquire);
 
         int size=b-t;
@@ -98,6 +100,7 @@ public:
         size_t b=bottom.load(memory_order_relaxed);
 
         b--; bottom.store(b,memory_order_relaxed);
+        atomic_thread_fence(memory_order_seq_cst);
         task=curr.load(memory_order_acquire)->get(b);
 
         size_t t=top.load(memory_order_acquire); 
