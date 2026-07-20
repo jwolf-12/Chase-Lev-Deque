@@ -1,0 +1,991 @@
+threads,run,output
+1,6,Sorted correctly
+Mutex queue time: 66154 us
+Tasks created: 38778
+1,7,Sorted correctly
+Mutex queue time: 67244 us
+Tasks created: 38778
+1,8,Sorted correctly
+Mutex queue time: 72947 us
+Tasks created: 38778
+1,9,Sorted correctly
+Mutex queue time: 70646 us
+Tasks created: 38778
+1,10,Sorted correctly
+Mutex queue time: 68938 us
+Tasks created: 38778
+1,11,Sorted correctly
+Mutex queue time: 69216 us
+Tasks created: 38778
+1,12,Sorted correctly
+Mutex queue time: 70936 us
+Tasks created: 38778
+1,13,Sorted correctly
+Mutex queue time: 68794 us
+Tasks created: 38778
+1,14,Sorted correctly
+Mutex queue time: 68893 us
+Tasks created: 38778
+1,15,Sorted correctly
+Mutex queue time: 66132 us
+Tasks created: 38778
+1,16,Sorted correctly
+Mutex queue time: 70271 us
+Tasks created: 38778
+1,17,Sorted correctly
+Mutex queue time: 71461 us
+Tasks created: 38778
+1,18,Sorted correctly
+Mutex queue time: 70727 us
+Tasks created: 38778
+1,19,Sorted correctly
+Mutex queue time: 67877 us
+Tasks created: 38778
+1,20,Sorted correctly
+Mutex queue time: 69107 us
+Tasks created: 38778
+1,21,Sorted correctly
+Mutex queue time: 68161 us
+Tasks created: 38778
+1,22,Sorted correctly
+Mutex queue time: 70917 us
+Tasks created: 38778
+1,23,Sorted correctly
+Mutex queue time: 68947 us
+Tasks created: 38778
+1,24,Sorted correctly
+Mutex queue time: 71064 us
+Tasks created: 38778
+1,25,Sorted correctly
+Mutex queue time: 68077 us
+Tasks created: 38778
+1,26,Sorted correctly
+Mutex queue time: 67429 us
+Tasks created: 38778
+1,27,Sorted correctly
+Mutex queue time: 69286 us
+Tasks created: 38778
+1,28,Sorted correctly
+Mutex queue time: 62552 us
+Tasks created: 38778
+1,29,Sorted correctly
+Mutex queue time: 59869 us
+Tasks created: 38778
+1,30,Sorted correctly
+Mutex queue time: 60085 us
+Tasks created: 38778
+1,31,Sorted correctly
+Mutex queue time: 62110 us
+Tasks created: 38778
+1,32,Sorted correctly
+Mutex queue time: 60376 us
+Tasks created: 38778
+1,33,Sorted correctly
+Mutex queue time: 64812 us
+Tasks created: 38778
+1,34,Sorted correctly
+Mutex queue time: 61062 us
+Tasks created: 38778
+1,35,Sorted correctly
+Mutex queue time: 66210 us
+Tasks created: 38778
+1,36,Sorted correctly
+Mutex queue time: 62543 us
+Tasks created: 38778
+1,37,Sorted correctly
+Mutex queue time: 60356 us
+Tasks created: 38778
+1,38,Sorted correctly
+Mutex queue time: 61056 us
+Tasks created: 38778
+1,39,Sorted correctly
+Mutex queue time: 63415 us
+Tasks created: 38778
+1,40,Sorted correctly
+Mutex queue time: 60191 us
+Tasks created: 38778
+1,41,Sorted correctly
+Mutex queue time: 64120 us
+Tasks created: 38778
+1,42,Sorted correctly
+Mutex queue time: 64357 us
+Tasks created: 38778
+1,43,Sorted correctly
+Mutex queue time: 59935 us
+Tasks created: 38778
+1,44,Sorted correctly
+Mutex queue time: 62139 us
+Tasks created: 38778
+1,45,Sorted correctly
+Mutex queue time: 61973 us
+Tasks created: 38778
+1,46,Sorted correctly
+Mutex queue time: 64399 us
+Tasks created: 38778
+1,47,Sorted correctly
+Mutex queue time: 61713 us
+Tasks created: 38778
+1,48,Sorted correctly
+Mutex queue time: 64221 us
+Tasks created: 38778
+1,49,Sorted correctly
+Mutex queue time: 63491 us
+Tasks created: 38778
+1,50,Sorted correctly
+Mutex queue time: 60153 us
+Tasks created: 38778
+1,51,Sorted correctly
+Mutex queue time: 58969 us
+Tasks created: 38778
+1,52,Sorted correctly
+Mutex queue time: 61896 us
+Tasks created: 38778
+1,53,Sorted correctly
+Mutex queue time: 59453 us
+Tasks created: 38778
+1,54,Sorted correctly
+Mutex queue time: 60445 us
+Tasks created: 38778
+1,55,Sorted correctly
+Mutex queue time: 60253 us
+Tasks created: 38778
+1,56,Sorted correctly
+Mutex queue time: 60599 us
+Tasks created: 38778
+1,57,Sorted correctly
+Mutex queue time: 60738 us
+Tasks created: 38778
+1,58,Sorted correctly
+Mutex queue time: 61990 us
+Tasks created: 38778
+1,59,Sorted correctly
+Mutex queue time: 62225 us
+Tasks created: 38778
+1,60,Sorted correctly
+Mutex queue time: 61054 us
+Tasks created: 38778
+2,6,Sorted correctly
+Mutex queue time: 30477 us
+Tasks created: 38778
+2,7,Sorted correctly
+Mutex queue time: 31633 us
+Tasks created: 38778
+2,8,Sorted correctly
+Mutex queue time: 31628 us
+Tasks created: 38778
+2,9,Sorted correctly
+Mutex queue time: 30809 us
+Tasks created: 38778
+2,10,Sorted correctly
+Mutex queue time: 30666 us
+Tasks created: 38778
+2,11,Sorted correctly
+Mutex queue time: 32135 us
+Tasks created: 38778
+2,12,Sorted correctly
+Mutex queue time: 32969 us
+Tasks created: 38778
+2,13,Sorted correctly
+Mutex queue time: 31827 us
+Tasks created: 38778
+2,14,Sorted correctly
+Mutex queue time: 30847 us
+Tasks created: 38778
+2,15,Sorted correctly
+Mutex queue time: 31229 us
+Tasks created: 38778
+2,16,Sorted correctly
+Mutex queue time: 32487 us
+Tasks created: 38778
+2,17,Sorted correctly
+Mutex queue time: 31121 us
+Tasks created: 38778
+2,18,Sorted correctly
+Mutex queue time: 31867 us
+Tasks created: 38778
+2,19,Sorted correctly
+Mutex queue time: 31048 us
+Tasks created: 38778
+2,20,Sorted correctly
+Mutex queue time: 32055 us
+Tasks created: 38778
+2,21,Sorted correctly
+Mutex queue time: 31560 us
+Tasks created: 38778
+2,22,Sorted correctly
+Mutex queue time: 31762 us
+Tasks created: 38778
+2,23,Sorted correctly
+Mutex queue time: 31326 us
+Tasks created: 38778
+2,24,Sorted correctly
+Mutex queue time: 30677 us
+Tasks created: 38778
+2,25,Sorted correctly
+Mutex queue time: 31847 us
+Tasks created: 38778
+2,26,Sorted correctly
+Mutex queue time: 32510 us
+Tasks created: 38778
+2,27,Sorted correctly
+Mutex queue time: 30740 us
+Tasks created: 38778
+2,28,Sorted correctly
+Mutex queue time: 31737 us
+Tasks created: 38778
+2,29,Sorted correctly
+Mutex queue time: 31909 us
+Tasks created: 38778
+2,30,Sorted correctly
+Mutex queue time: 31427 us
+Tasks created: 38778
+2,31,Sorted correctly
+Mutex queue time: 31834 us
+Tasks created: 38778
+2,32,Sorted correctly
+Mutex queue time: 31459 us
+Tasks created: 38778
+2,33,Sorted correctly
+Mutex queue time: 33390 us
+Tasks created: 38778
+2,34,Sorted correctly
+Mutex queue time: 31845 us
+Tasks created: 38778
+2,35,Sorted correctly
+Mutex queue time: 35101 us
+Tasks created: 38778
+2,36,Sorted correctly
+Mutex queue time: 32765 us
+Tasks created: 38778
+2,37,Sorted correctly
+Mutex queue time: 32348 us
+Tasks created: 38778
+2,38,Sorted correctly
+Mutex queue time: 36069 us
+Tasks created: 38778
+2,39,Sorted correctly
+Mutex queue time: 32505 us
+Tasks created: 38778
+2,40,Sorted correctly
+Mutex queue time: 33382 us
+Tasks created: 38778
+2,41,Sorted correctly
+Mutex queue time: 32140 us
+Tasks created: 38778
+2,42,Sorted correctly
+Mutex queue time: 33120 us
+Tasks created: 38778
+2,43,Sorted correctly
+Mutex queue time: 33946 us
+Tasks created: 38778
+2,44,Sorted correctly
+Mutex queue time: 33417 us
+Tasks created: 38778
+2,45,Sorted correctly
+Mutex queue time: 33138 us
+Tasks created: 38778
+2,46,Sorted correctly
+Mutex queue time: 34531 us
+Tasks created: 38778
+2,47,Sorted correctly
+Mutex queue time: 33336 us
+Tasks created: 38778
+2,48,Sorted correctly
+Mutex queue time: 32112 us
+Tasks created: 38778
+2,49,Sorted correctly
+Mutex queue time: 31863 us
+Tasks created: 38778
+2,50,Sorted correctly
+Mutex queue time: 31409 us
+Tasks created: 38778
+2,51,Sorted correctly
+Mutex queue time: 34618 us
+Tasks created: 38778
+2,52,Sorted correctly
+Mutex queue time: 33351 us
+Tasks created: 38778
+2,53,Sorted correctly
+Mutex queue time: 31988 us
+Tasks created: 38778
+2,54,Sorted correctly
+Mutex queue time: 32918 us
+Tasks created: 38778
+2,55,Sorted correctly
+Mutex queue time: 31895 us
+Tasks created: 38778
+2,56,Sorted correctly
+Mutex queue time: 33299 us
+Tasks created: 38778
+2,57,Sorted correctly
+Mutex queue time: 34109 us
+Tasks created: 38778
+2,58,Sorted correctly
+Mutex queue time: 33918 us
+Tasks created: 38778
+2,59,Sorted correctly
+Mutex queue time: 32831 us
+Tasks created: 38778
+2,60,Sorted correctly
+Mutex queue time: 32683 us
+Tasks created: 38778
+4,6,Sorted correctly
+Mutex queue time: 20909 us
+Tasks created: 38778
+4,7,Sorted correctly
+Mutex queue time: 20601 us
+Tasks created: 38778
+4,8,Sorted correctly
+Mutex queue time: 19730 us
+Tasks created: 38778
+4,9,Sorted correctly
+Mutex queue time: 20765 us
+Tasks created: 38778
+4,10,Sorted correctly
+Mutex queue time: 20916 us
+Tasks created: 38778
+4,11,Sorted correctly
+Mutex queue time: 21811 us
+Tasks created: 38778
+4,12,Sorted correctly
+Mutex queue time: 20804 us
+Tasks created: 38778
+4,13,Sorted correctly
+Mutex queue time: 21934 us
+Tasks created: 38778
+4,14,Sorted correctly
+Mutex queue time: 21266 us
+Tasks created: 38778
+4,15,Sorted correctly
+Mutex queue time: 20803 us
+Tasks created: 38778
+4,16,Sorted correctly
+Mutex queue time: 20961 us
+Tasks created: 38778
+4,17,Sorted correctly
+Mutex queue time: 20385 us
+Tasks created: 38778
+4,18,Sorted correctly
+Mutex queue time: 19787 us
+Tasks created: 38778
+4,19,Sorted correctly
+Mutex queue time: 20380 us
+Tasks created: 38778
+4,20,Sorted correctly
+Mutex queue time: 20711 us
+Tasks created: 38778
+4,21,Sorted correctly
+Mutex queue time: 19784 us
+Tasks created: 38778
+4,22,Sorted correctly
+Mutex queue time: 21883 us
+Tasks created: 38778
+4,23,Sorted correctly
+Mutex queue time: 21526 us
+Tasks created: 38778
+4,24,Sorted correctly
+Mutex queue time: 22136 us
+Tasks created: 38778
+4,25,Sorted correctly
+Mutex queue time: 20128 us
+Tasks created: 38778
+4,26,Sorted correctly
+Mutex queue time: 21259 us
+Tasks created: 38778
+4,27,Sorted correctly
+Mutex queue time: 21276 us
+Tasks created: 38778
+4,28,Sorted correctly
+Mutex queue time: 20519 us
+Tasks created: 38778
+4,29,Sorted correctly
+Mutex queue time: 21167 us
+Tasks created: 38778
+4,30,Sorted correctly
+Mutex queue time: 20655 us
+Tasks created: 38778
+4,31,Sorted correctly
+Mutex queue time: 21329 us
+Tasks created: 38778
+4,32,Sorted correctly
+Mutex queue time: 20590 us
+Tasks created: 38778
+4,33,Sorted correctly
+Mutex queue time: 22410 us
+Tasks created: 38778
+4,34,Sorted correctly
+Mutex queue time: 21622 us
+Tasks created: 38778
+4,35,Sorted correctly
+Mutex queue time: 20749 us
+Tasks created: 38778
+4,36,Sorted correctly
+Mutex queue time: 21886 us
+Tasks created: 38778
+4,37,Sorted correctly
+Mutex queue time: 21332 us
+Tasks created: 38778
+4,38,Sorted correctly
+Mutex queue time: 21480 us
+Tasks created: 38778
+4,39,Sorted correctly
+Mutex queue time: 22322 us
+Tasks created: 38778
+4,40,Sorted correctly
+Mutex queue time: 20976 us
+Tasks created: 38778
+4,41,Sorted correctly
+Mutex queue time: 21131 us
+Tasks created: 38778
+4,42,Sorted correctly
+Mutex queue time: 21204 us
+Tasks created: 38778
+4,43,Sorted correctly
+Mutex queue time: 21665 us
+Tasks created: 38778
+4,44,Sorted correctly
+Mutex queue time: 21109 us
+Tasks created: 38778
+4,45,Sorted correctly
+Mutex queue time: 21131 us
+Tasks created: 38778
+4,46,Sorted correctly
+Mutex queue time: 19291 us
+Tasks created: 38778
+4,47,Sorted correctly
+Mutex queue time: 19562 us
+Tasks created: 38778
+4,48,Sorted correctly
+Mutex queue time: 19947 us
+Tasks created: 38778
+4,49,Sorted correctly
+Mutex queue time: 20904 us
+Tasks created: 38778
+4,50,Sorted correctly
+Mutex queue time: 21617 us
+Tasks created: 38778
+4,51,Sorted correctly
+Mutex queue time: 20161 us
+Tasks created: 38778
+4,52,Sorted correctly
+Mutex queue time: 20728 us
+Tasks created: 38778
+4,53,Sorted correctly
+Mutex queue time: 21113 us
+Tasks created: 38778
+4,54,Sorted correctly
+Mutex queue time: 21511 us
+Tasks created: 38778
+4,55,Sorted correctly
+Mutex queue time: 20442 us
+Tasks created: 38778
+4,56,Sorted correctly
+Mutex queue time: 21104 us
+Tasks created: 38778
+4,57,Sorted correctly
+Mutex queue time: 20763 us
+Tasks created: 38778
+4,58,Sorted correctly
+Mutex queue time: 21354 us
+Tasks created: 38778
+4,59,Sorted correctly
+Mutex queue time: 20739 us
+Tasks created: 38778
+4,60,Sorted correctly
+Mutex queue time: 21152 us
+Tasks created: 38778
+6,6,Sorted correctly
+Mutex queue time: 17749 us
+Tasks created: 38778
+6,7,Sorted correctly
+Mutex queue time: 17887 us
+Tasks created: 38778
+6,8,Sorted correctly
+Mutex queue time: 18253 us
+Tasks created: 38778
+6,9,Sorted correctly
+Mutex queue time: 17957 us
+Tasks created: 38778
+6,10,Sorted correctly
+Mutex queue time: 17606 us
+Tasks created: 38778
+6,11,Sorted correctly
+Mutex queue time: 18159 us
+Tasks created: 38778
+6,12,Sorted correctly
+Mutex queue time: 17871 us
+Tasks created: 38778
+6,13,Sorted correctly
+Mutex queue time: 17232 us
+Tasks created: 38778
+6,14,Sorted correctly
+Mutex queue time: 17414 us
+Tasks created: 38778
+6,15,Sorted correctly
+Mutex queue time: 17682 us
+Tasks created: 38778
+6,16,Sorted correctly
+Mutex queue time: 17670 us
+Tasks created: 38778
+6,17,Sorted correctly
+Mutex queue time: 17269 us
+Tasks created: 38778
+6,18,Sorted correctly
+Mutex queue time: 18262 us
+Tasks created: 38778
+6,19,Sorted correctly
+Mutex queue time: 18919 us
+Tasks created: 38778
+6,20,Sorted correctly
+Mutex queue time: 17878 us
+Tasks created: 38778
+6,21,Sorted correctly
+Mutex queue time: 17753 us
+Tasks created: 38778
+6,22,Sorted correctly
+Mutex queue time: 17601 us
+Tasks created: 38778
+6,23,Sorted correctly
+Mutex queue time: 17042 us
+Tasks created: 38778
+6,24,Sorted correctly
+Mutex queue time: 17729 us
+Tasks created: 38778
+6,25,Sorted correctly
+Mutex queue time: 17467 us
+Tasks created: 38778
+6,26,Sorted correctly
+Mutex queue time: 17619 us
+Tasks created: 38778
+6,27,Sorted correctly
+Mutex queue time: 18210 us
+Tasks created: 38778
+6,28,Sorted correctly
+Mutex queue time: 18049 us
+Tasks created: 38778
+6,29,Sorted correctly
+Mutex queue time: 19764 us
+Tasks created: 38778
+6,30,Sorted correctly
+Mutex queue time: 18764 us
+Tasks created: 38778
+6,31,Sorted correctly
+Mutex queue time: 17907 us
+Tasks created: 38778
+6,32,Sorted correctly
+Mutex queue time: 18067 us
+Tasks created: 38778
+6,33,Sorted correctly
+Mutex queue time: 17557 us
+Tasks created: 38778
+6,34,Sorted correctly
+Mutex queue time: 18332 us
+Tasks created: 38778
+6,35,Sorted correctly
+Mutex queue time: 17367 us
+Tasks created: 38778
+6,36,Sorted correctly
+Mutex queue time: 17889 us
+Tasks created: 38778
+6,37,Sorted correctly
+Mutex queue time: 22944 us
+Tasks created: 38778
+6,38,Sorted correctly
+Mutex queue time: 18336 us
+Tasks created: 38778
+6,39,Sorted correctly
+Mutex queue time: 17233 us
+Tasks created: 38778
+6,40,Sorted correctly
+Mutex queue time: 17857 us
+Tasks created: 38778
+6,41,Sorted correctly
+Mutex queue time: 17662 us
+Tasks created: 38778
+6,42,Sorted correctly
+Mutex queue time: 17765 us
+Tasks created: 38778
+6,43,Sorted correctly
+Mutex queue time: 18868 us
+Tasks created: 38778
+6,44,Sorted correctly
+Mutex queue time: 17670 us
+Tasks created: 38778
+6,45,Sorted correctly
+Mutex queue time: 18022 us
+Tasks created: 38778
+6,46,Sorted correctly
+Mutex queue time: 17609 us
+Tasks created: 38778
+6,47,Sorted correctly
+Mutex queue time: 18974 us
+Tasks created: 38778
+6,48,Sorted correctly
+Mutex queue time: 17999 us
+Tasks created: 38778
+6,49,Sorted correctly
+Mutex queue time: 18322 us
+Tasks created: 38778
+6,50,Sorted correctly
+Mutex queue time: 17668 us
+Tasks created: 38778
+6,51,Sorted correctly
+Mutex queue time: 17817 us
+Tasks created: 38778
+6,52,Sorted correctly
+Mutex queue time: 17103 us
+Tasks created: 38778
+6,53,Sorted correctly
+Mutex queue time: 17469 us
+Tasks created: 38778
+6,54,Sorted correctly
+Mutex queue time: 18335 us
+Tasks created: 38778
+6,55,Sorted correctly
+Mutex queue time: 17393 us
+Tasks created: 38778
+6,56,Sorted correctly
+Mutex queue time: 17159 us
+Tasks created: 38778
+6,57,Sorted correctly
+Mutex queue time: 18224 us
+Tasks created: 38778
+6,58,Sorted correctly
+Mutex queue time: 17255 us
+Tasks created: 38778
+6,59,Sorted correctly
+Mutex queue time: 17806 us
+Tasks created: 38778
+6,60,Sorted correctly
+Mutex queue time: 17746 us
+Tasks created: 38778
+8,6,Sorted correctly
+Mutex queue time: 16209 us
+Tasks created: 38778
+8,7,Sorted correctly
+Mutex queue time: 16465 us
+Tasks created: 38778
+8,8,Sorted correctly
+Mutex queue time: 15319 us
+Tasks created: 38778
+8,9,Sorted correctly
+Mutex queue time: 15844 us
+Tasks created: 38778
+8,10,Sorted correctly
+Mutex queue time: 15353 us
+Tasks created: 38778
+8,11,Sorted correctly
+Mutex queue time: 17372 us
+Tasks created: 38778
+8,12,Sorted correctly
+Mutex queue time: 16752 us
+Tasks created: 38778
+8,13,Sorted correctly
+Mutex queue time: 15896 us
+Tasks created: 38778
+8,14,Sorted correctly
+Mutex queue time: 16693 us
+Tasks created: 38778
+8,15,Sorted correctly
+Mutex queue time: 16174 us
+Tasks created: 38778
+8,16,Sorted correctly
+Mutex queue time: 15685 us
+Tasks created: 38778
+8,17,Sorted correctly
+Mutex queue time: 17360 us
+Tasks created: 38778
+8,18,Sorted correctly
+Mutex queue time: 16733 us
+Tasks created: 38778
+8,19,Sorted correctly
+Mutex queue time: 16571 us
+Tasks created: 38778
+8,20,Sorted correctly
+Mutex queue time: 16469 us
+Tasks created: 38778
+8,21,Sorted correctly
+Mutex queue time: 16335 us
+Tasks created: 38778
+8,22,Sorted correctly
+Mutex queue time: 17866 us
+Tasks created: 38778
+8,23,Sorted correctly
+Mutex queue time: 18049 us
+Tasks created: 38778
+8,24,Sorted correctly
+Mutex queue time: 16607 us
+Tasks created: 38778
+8,25,Sorted correctly
+Mutex queue time: 17278 us
+Tasks created: 38778
+8,26,Sorted correctly
+Mutex queue time: 15906 us
+Tasks created: 38778
+8,27,Sorted correctly
+Mutex queue time: 17363 us
+Tasks created: 38778
+8,28,Sorted correctly
+Mutex queue time: 17307 us
+Tasks created: 38778
+8,29,Sorted correctly
+Mutex queue time: 16839 us
+Tasks created: 38778
+8,30,Sorted correctly
+Mutex queue time: 17252 us
+Tasks created: 38778
+8,31,Sorted correctly
+Mutex queue time: 17024 us
+Tasks created: 38778
+8,32,Sorted correctly
+Mutex queue time: 17311 us
+Tasks created: 38778
+8,33,Sorted correctly
+Mutex queue time: 17236 us
+Tasks created: 38778
+8,34,Sorted correctly
+Mutex queue time: 17530 us
+Tasks created: 38778
+8,35,Sorted correctly
+Mutex queue time: 17104 us
+Tasks created: 38778
+8,36,Sorted correctly
+Mutex queue time: 17969 us
+Tasks created: 38778
+8,37,Sorted correctly
+Mutex queue time: 15594 us
+Tasks created: 38778
+8,38,Sorted correctly
+Mutex queue time: 16677 us
+Tasks created: 38778
+8,39,Sorted correctly
+Mutex queue time: 18058 us
+Tasks created: 38778
+8,40,Sorted correctly
+Mutex queue time: 15477 us
+Tasks created: 38778
+8,41,Sorted correctly
+Mutex queue time: 16669 us
+Tasks created: 38778
+8,42,Sorted correctly
+Mutex queue time: 17070 us
+Tasks created: 38778
+8,43,Sorted correctly
+Mutex queue time: 15946 us
+Tasks created: 38778
+8,44,Sorted correctly
+Mutex queue time: 16174 us
+Tasks created: 38778
+8,45,Sorted correctly
+Mutex queue time: 17266 us
+Tasks created: 38778
+8,46,Sorted correctly
+Mutex queue time: 16730 us
+Tasks created: 38778
+8,47,Sorted correctly
+Mutex queue time: 16387 us
+Tasks created: 38778
+8,48,Sorted correctly
+Mutex queue time: 15347 us
+Tasks created: 38778
+8,49,Sorted correctly
+Mutex queue time: 17469 us
+Tasks created: 38778
+8,50,Sorted correctly
+Mutex queue time: 16580 us
+Tasks created: 38778
+8,51,Sorted correctly
+Mutex queue time: 19513 us
+Tasks created: 38778
+8,52,Sorted correctly
+Mutex queue time: 17025 us
+Tasks created: 38778
+8,53,Sorted correctly
+Mutex queue time: 17134 us
+Tasks created: 38778
+8,54,Sorted correctly
+Mutex queue time: 15935 us
+Tasks created: 38778
+8,55,Sorted correctly
+Mutex queue time: 16004 us
+Tasks created: 38778
+8,56,Sorted correctly
+Mutex queue time: 17387 us
+Tasks created: 38778
+8,57,Sorted correctly
+Mutex queue time: 16228 us
+Tasks created: 38778
+8,58,Sorted correctly
+Mutex queue time: 16696 us
+Tasks created: 38778
+8,59,Sorted correctly
+Mutex queue time: 16568 us
+Tasks created: 38778
+8,60,Sorted correctly
+Mutex queue time: 16203 us
+Tasks created: 38778
+12,6,Sorted correctly
+Mutex queue time: 16523 us
+Tasks created: 38778
+12,7,Sorted correctly
+Mutex queue time: 19232 us
+Tasks created: 38778
+12,8,Sorted correctly
+Mutex queue time: 17636 us
+Tasks created: 38778
+12,9,Sorted correctly
+Mutex queue time: 17828 us
+Tasks created: 38778
+12,10,Sorted correctly
+Mutex queue time: 15687 us
+Tasks created: 38778
+12,11,Sorted correctly
+Mutex queue time: 17108 us
+Tasks created: 38778
+12,12,Sorted correctly
+Mutex queue time: 16711 us
+Tasks created: 38778
+12,13,Sorted correctly
+Mutex queue time: 16352 us
+Tasks created: 38778
+12,14,Sorted correctly
+Mutex queue time: 17488 us
+Tasks created: 38778
+12,15,Sorted correctly
+Mutex queue time: 17634 us
+Tasks created: 38778
+12,16,Sorted correctly
+Mutex queue time: 16903 us
+Tasks created: 38778
+12,17,Sorted correctly
+Mutex queue time: 17058 us
+Tasks created: 38778
+12,18,Sorted correctly
+Mutex queue time: 16871 us
+Tasks created: 38778
+12,19,Sorted correctly
+Mutex queue time: 16464 us
+Tasks created: 38778
+12,20,Sorted correctly
+Mutex queue time: 16750 us
+Tasks created: 38778
+12,21,Sorted correctly
+Mutex queue time: 17818 us
+Tasks created: 38778
+12,22,Sorted correctly
+Mutex queue time: 17647 us
+Tasks created: 38778
+12,23,Sorted correctly
+Mutex queue time: 16283 us
+Tasks created: 38778
+12,24,Sorted correctly
+Mutex queue time: 17181 us
+Tasks created: 38778
+12,25,Sorted correctly
+Mutex queue time: 15730 us
+Tasks created: 38778
+12,26,Sorted correctly
+Mutex queue time: 17683 us
+Tasks created: 38778
+12,27,Sorted correctly
+Mutex queue time: 17084 us
+Tasks created: 38778
+12,28,Sorted correctly
+Mutex queue time: 16354 us
+Tasks created: 38778
+12,29,Sorted correctly
+Mutex queue time: 16210 us
+Tasks created: 38778
+12,30,Sorted correctly
+Mutex queue time: 16867 us
+Tasks created: 38778
+12,31,Sorted correctly
+Mutex queue time: 16966 us
+Tasks created: 38778
+12,32,Sorted correctly
+Mutex queue time: 15570 us
+Tasks created: 38778
+12,33,Sorted correctly
+Mutex queue time: 16147 us
+Tasks created: 38778
+12,34,Sorted correctly
+Mutex queue time: 15891 us
+Tasks created: 38778
+12,35,Sorted correctly
+Mutex queue time: 16469 us
+Tasks created: 38778
+12,36,Sorted correctly
+Mutex queue time: 17389 us
+Tasks created: 38778
+12,37,Sorted correctly
+Mutex queue time: 16158 us
+Tasks created: 38778
+12,38,Sorted correctly
+Mutex queue time: 17698 us
+Tasks created: 38778
+12,39,Sorted correctly
+Mutex queue time: 17560 us
+Tasks created: 38778
+12,40,Sorted correctly
+Mutex queue time: 16675 us
+Tasks created: 38778
+12,41,Sorted correctly
+Mutex queue time: 17854 us
+Tasks created: 38778
+12,42,Sorted correctly
+Mutex queue time: 18122 us
+Tasks created: 38778
+12,43,Sorted correctly
+Mutex queue time: 17404 us
+Tasks created: 38778
+12,44,Sorted correctly
+Mutex queue time: 19719 us
+Tasks created: 38778
+12,45,Sorted correctly
+Mutex queue time: 17426 us
+Tasks created: 38778
+12,46,Sorted correctly
+Mutex queue time: 17438 us
+Tasks created: 38778
+12,47,Sorted correctly
+Mutex queue time: 16572 us
+Tasks created: 38778
+12,48,Sorted correctly
+Mutex queue time: 19045 us
+Tasks created: 38778
+12,49,Sorted correctly
+Mutex queue time: 17157 us
+Tasks created: 38778
+12,50,Sorted correctly
+Mutex queue time: 17619 us
+Tasks created: 38778
+12,51,Sorted correctly
+Mutex queue time: 16872 us
+Tasks created: 38778
+12,52,Sorted correctly
+Mutex queue time: 16334 us
+Tasks created: 38778
+12,53,Sorted correctly
+Mutex queue time: 15779 us
+Tasks created: 38778
+12,54,Sorted correctly
+Mutex queue time: 16643 us
+Tasks created: 38778
+12,55,Sorted correctly
+Mutex queue time: 15999 us
+Tasks created: 38778
+12,56,Sorted correctly
+Mutex queue time: 16451 us
+Tasks created: 38778
+12,57,Sorted correctly
+Mutex queue time: 16216 us
+Tasks created: 38778
+12,58,Sorted correctly
+Mutex queue time: 16122 us
+Tasks created: 38778
+12,59,Sorted correctly
+Mutex queue time: 15928 us
+Tasks created: 38778
+12,60,Sorted correctly
+Mutex queue time: 16510 us
+Tasks created: 38778

@@ -1,0 +1,991 @@
+threads,run,output
+1,6,Sorted correctly
+Chase-Lev time: 68028 us
+Tasks created: 38778
+1,7,Sorted correctly
+Chase-Lev time: 66485 us
+Tasks created: 38778
+1,8,Sorted correctly
+Chase-Lev time: 65941 us
+Tasks created: 38778
+1,9,Sorted correctly
+Chase-Lev time: 66309 us
+Tasks created: 38778
+1,10,Sorted correctly
+Chase-Lev time: 68718 us
+Tasks created: 38778
+1,11,Sorted correctly
+Chase-Lev time: 67174 us
+Tasks created: 38778
+1,12,Sorted correctly
+Chase-Lev time: 69927 us
+Tasks created: 38778
+1,13,Sorted correctly
+Chase-Lev time: 67142 us
+Tasks created: 38778
+1,14,Sorted correctly
+Chase-Lev time: 67051 us
+Tasks created: 38778
+1,15,Sorted correctly
+Chase-Lev time: 66520 us
+Tasks created: 38778
+1,16,Sorted correctly
+Chase-Lev time: 71088 us
+Tasks created: 38778
+1,17,Sorted correctly
+Chase-Lev time: 66520 us
+Tasks created: 38778
+1,18,Sorted correctly
+Chase-Lev time: 66462 us
+Tasks created: 38778
+1,19,Sorted correctly
+Chase-Lev time: 71179 us
+Tasks created: 38778
+1,20,Sorted correctly
+Chase-Lev time: 72285 us
+Tasks created: 38778
+1,21,Sorted correctly
+Chase-Lev time: 68628 us
+Tasks created: 38778
+1,22,Sorted correctly
+Chase-Lev time: 68695 us
+Tasks created: 38778
+1,23,Sorted correctly
+Chase-Lev time: 66026 us
+Tasks created: 38778
+1,24,Sorted correctly
+Chase-Lev time: 65366 us
+Tasks created: 38778
+1,25,Sorted correctly
+Chase-Lev time: 59417 us
+Tasks created: 38778
+1,26,Sorted correctly
+Chase-Lev time: 65788 us
+Tasks created: 38778
+1,27,Sorted correctly
+Chase-Lev time: 61957 us
+Tasks created: 38778
+1,28,Sorted correctly
+Chase-Lev time: 60949 us
+Tasks created: 38778
+1,29,Sorted correctly
+Chase-Lev time: 59871 us
+Tasks created: 38778
+1,30,Sorted correctly
+Chase-Lev time: 61433 us
+Tasks created: 38778
+1,31,Sorted correctly
+Chase-Lev time: 60369 us
+Tasks created: 38778
+1,32,Sorted correctly
+Chase-Lev time: 60407 us
+Tasks created: 38778
+1,33,Sorted correctly
+Chase-Lev time: 61709 us
+Tasks created: 38778
+1,34,Sorted correctly
+Chase-Lev time: 60137 us
+Tasks created: 38778
+1,35,Sorted correctly
+Chase-Lev time: 63032 us
+Tasks created: 38778
+1,36,Sorted correctly
+Chase-Lev time: 59600 us
+Tasks created: 38778
+1,37,Sorted correctly
+Chase-Lev time: 60069 us
+Tasks created: 38778
+1,38,Sorted correctly
+Chase-Lev time: 58972 us
+Tasks created: 38778
+1,39,Sorted correctly
+Chase-Lev time: 61200 us
+Tasks created: 38778
+1,40,Sorted correctly
+Chase-Lev time: 60345 us
+Tasks created: 38778
+1,41,Sorted correctly
+Chase-Lev time: 61150 us
+Tasks created: 38778
+1,42,Sorted correctly
+Chase-Lev time: 58965 us
+Tasks created: 38778
+1,43,Sorted correctly
+Chase-Lev time: 58974 us
+Tasks created: 38778
+1,44,Sorted correctly
+Chase-Lev time: 60031 us
+Tasks created: 38778
+1,45,Sorted correctly
+Chase-Lev time: 60926 us
+Tasks created: 38778
+1,46,Sorted correctly
+Chase-Lev time: 61839 us
+Tasks created: 38778
+1,47,Sorted correctly
+Chase-Lev time: 61845 us
+Tasks created: 38778
+1,48,Sorted correctly
+Chase-Lev time: 62321 us
+Tasks created: 38778
+1,49,Sorted correctly
+Chase-Lev time: 58467 us
+Tasks created: 38778
+1,50,Sorted correctly
+Chase-Lev time: 60639 us
+Tasks created: 38778
+1,51,Sorted correctly
+Chase-Lev time: 59571 us
+Tasks created: 38778
+1,52,Sorted correctly
+Chase-Lev time: 60350 us
+Tasks created: 38778
+1,53,Sorted correctly
+Chase-Lev time: 60254 us
+Tasks created: 38778
+1,54,Sorted correctly
+Chase-Lev time: 62850 us
+Tasks created: 38778
+1,55,Sorted correctly
+Chase-Lev time: 60106 us
+Tasks created: 38778
+1,56,Sorted correctly
+Chase-Lev time: 59359 us
+Tasks created: 38778
+1,57,Sorted correctly
+Chase-Lev time: 59785 us
+Tasks created: 38778
+1,58,Sorted correctly
+Chase-Lev time: 59666 us
+Tasks created: 38778
+1,59,Sorted correctly
+Chase-Lev time: 60235 us
+Tasks created: 38778
+1,60,Sorted correctly
+Chase-Lev time: 59583 us
+Tasks created: 38778
+2,6,Sorted correctly
+Chase-Lev time: 31557 us
+Tasks created: 38778
+2,7,Sorted correctly
+Chase-Lev time: 32061 us
+Tasks created: 38778
+2,8,Sorted correctly
+Chase-Lev time: 31804 us
+Tasks created: 38778
+2,9,Sorted correctly
+Chase-Lev time: 31298 us
+Tasks created: 38778
+2,10,Sorted correctly
+Chase-Lev time: 32281 us
+Tasks created: 38778
+2,11,Sorted correctly
+Chase-Lev time: 30175 us
+Tasks created: 38778
+2,12,Sorted correctly
+Chase-Lev time: 31875 us
+Tasks created: 38778
+2,13,Sorted correctly
+Chase-Lev time: 31576 us
+Tasks created: 38778
+2,14,Sorted correctly
+Chase-Lev time: 31726 us
+Tasks created: 38778
+2,15,Sorted correctly
+Chase-Lev time: 31534 us
+Tasks created: 38778
+2,16,Sorted correctly
+Chase-Lev time: 31657 us
+Tasks created: 38778
+2,17,Sorted correctly
+Chase-Lev time: 30180 us
+Tasks created: 38778
+2,18,Sorted correctly
+Chase-Lev time: 30826 us
+Tasks created: 38778
+2,19,Sorted correctly
+Chase-Lev time: 34243 us
+Tasks created: 38778
+2,20,Sorted correctly
+Chase-Lev time: 30047 us
+Tasks created: 38778
+2,21,Sorted correctly
+Chase-Lev time: 30481 us
+Tasks created: 38778
+2,22,Sorted correctly
+Chase-Lev time: 30411 us
+Tasks created: 38778
+2,23,Sorted correctly
+Chase-Lev time: 30884 us
+Tasks created: 38778
+2,24,Sorted correctly
+Chase-Lev time: 31492 us
+Tasks created: 38778
+2,25,Sorted correctly
+Chase-Lev time: 32358 us
+Tasks created: 38778
+2,26,Sorted correctly
+Chase-Lev time: 30135 us
+Tasks created: 38778
+2,27,Sorted correctly
+Chase-Lev time: 30252 us
+Tasks created: 38778
+2,28,Sorted correctly
+Chase-Lev time: 30452 us
+Tasks created: 38778
+2,29,Sorted correctly
+Chase-Lev time: 30848 us
+Tasks created: 38778
+2,30,Sorted correctly
+Chase-Lev time: 30755 us
+Tasks created: 38778
+2,31,Sorted correctly
+Chase-Lev time: 30276 us
+Tasks created: 38778
+2,32,Sorted correctly
+Chase-Lev time: 31351 us
+Tasks created: 38778
+2,33,Sorted correctly
+Chase-Lev time: 30257 us
+Tasks created: 38778
+2,34,Sorted correctly
+Chase-Lev time: 30414 us
+Tasks created: 38778
+2,35,Sorted correctly
+Chase-Lev time: 30678 us
+Tasks created: 38778
+2,36,Sorted correctly
+Chase-Lev time: 31714 us
+Tasks created: 38778
+2,37,Sorted correctly
+Chase-Lev time: 32103 us
+Tasks created: 38778
+2,38,Sorted correctly
+Chase-Lev time: 33043 us
+Tasks created: 38778
+2,39,Sorted correctly
+Chase-Lev time: 32110 us
+Tasks created: 38778
+2,40,Sorted correctly
+Chase-Lev time: 32446 us
+Tasks created: 38778
+2,41,Sorted correctly
+Chase-Lev time: 34324 us
+Tasks created: 38778
+2,42,Sorted correctly
+Chase-Lev time: 31789 us
+Tasks created: 38778
+2,43,Sorted correctly
+Chase-Lev time: 33338 us
+Tasks created: 38778
+2,44,Sorted correctly
+Chase-Lev time: 34341 us
+Tasks created: 38778
+2,45,Sorted correctly
+Chase-Lev time: 32353 us
+Tasks created: 38778
+2,46,Sorted correctly
+Chase-Lev time: 33044 us
+Tasks created: 38778
+2,47,Sorted correctly
+Chase-Lev time: 32082 us
+Tasks created: 38778
+2,48,Sorted correctly
+Chase-Lev time: 31318 us
+Tasks created: 38778
+2,49,Sorted correctly
+Chase-Lev time: 32172 us
+Tasks created: 38778
+2,50,Sorted correctly
+Chase-Lev time: 32960 us
+Tasks created: 38778
+2,51,Sorted correctly
+Chase-Lev time: 32751 us
+Tasks created: 38778
+2,52,Sorted correctly
+Chase-Lev time: 31809 us
+Tasks created: 38778
+2,53,Sorted correctly
+Chase-Lev time: 32133 us
+Tasks created: 38778
+2,54,Sorted correctly
+Chase-Lev time: 32695 us
+Tasks created: 38778
+2,55,Sorted correctly
+Chase-Lev time: 31942 us
+Tasks created: 38778
+2,56,Sorted correctly
+Chase-Lev time: 33045 us
+Tasks created: 38778
+2,57,Sorted correctly
+Chase-Lev time: 31547 us
+Tasks created: 38778
+2,58,Sorted correctly
+Chase-Lev time: 30849 us
+Tasks created: 38778
+2,59,Sorted correctly
+Chase-Lev time: 33275 us
+Tasks created: 38778
+2,60,Sorted correctly
+Chase-Lev time: 32075 us
+Tasks created: 38778
+4,6,Sorted correctly
+Chase-Lev time: 18312 us
+Tasks created: 38778
+4,7,Sorted correctly
+Chase-Lev time: 17834 us
+Tasks created: 38778
+4,8,Sorted correctly
+Chase-Lev time: 16609 us
+Tasks created: 38778
+4,9,Sorted correctly
+Chase-Lev time: 18484 us
+Tasks created: 38778
+4,10,Sorted correctly
+Chase-Lev time: 17624 us
+Tasks created: 38778
+4,11,Sorted correctly
+Chase-Lev time: 18723 us
+Tasks created: 38778
+4,12,Sorted correctly
+Chase-Lev time: 18649 us
+Tasks created: 38778
+4,13,Sorted correctly
+Chase-Lev time: 18393 us
+Tasks created: 38778
+4,14,Sorted correctly
+Chase-Lev time: 18273 us
+Tasks created: 38778
+4,15,Sorted correctly
+Chase-Lev time: 19131 us
+Tasks created: 38778
+4,16,Sorted correctly
+Chase-Lev time: 20492 us
+Tasks created: 38778
+4,17,Sorted correctly
+Chase-Lev time: 18319 us
+Tasks created: 38778
+4,18,Sorted correctly
+Chase-Lev time: 18576 us
+Tasks created: 38778
+4,19,Sorted correctly
+Chase-Lev time: 18387 us
+Tasks created: 38778
+4,20,Sorted correctly
+Chase-Lev time: 17703 us
+Tasks created: 38778
+4,21,Sorted correctly
+Chase-Lev time: 18955 us
+Tasks created: 38778
+4,22,Sorted correctly
+Chase-Lev time: 19356 us
+Tasks created: 38778
+4,23,Sorted correctly
+Chase-Lev time: 18592 us
+Tasks created: 38778
+4,24,Sorted correctly
+Chase-Lev time: 18107 us
+Tasks created: 38778
+4,25,Sorted correctly
+Chase-Lev time: 18656 us
+Tasks created: 38778
+4,26,Sorted correctly
+Chase-Lev time: 18917 us
+Tasks created: 38778
+4,27,Sorted correctly
+Chase-Lev time: 18828 us
+Tasks created: 38778
+4,28,Sorted correctly
+Chase-Lev time: 18676 us
+Tasks created: 38778
+4,29,Sorted correctly
+Chase-Lev time: 18372 us
+Tasks created: 38778
+4,30,Sorted correctly
+Chase-Lev time: 17685 us
+Tasks created: 38778
+4,31,Sorted correctly
+Chase-Lev time: 17442 us
+Tasks created: 38778
+4,32,Sorted correctly
+Chase-Lev time: 18289 us
+Tasks created: 38778
+4,33,Sorted correctly
+Chase-Lev time: 18288 us
+Tasks created: 38778
+4,34,Sorted correctly
+Chase-Lev time: 18175 us
+Tasks created: 38778
+4,35,Sorted correctly
+Chase-Lev time: 18633 us
+Tasks created: 38778
+4,36,Sorted correctly
+Chase-Lev time: 17957 us
+Tasks created: 38778
+4,37,Sorted correctly
+Chase-Lev time: 18589 us
+Tasks created: 38778
+4,38,Sorted correctly
+Chase-Lev time: 18126 us
+Tasks created: 38778
+4,39,Sorted correctly
+Chase-Lev time: 17885 us
+Tasks created: 38778
+4,40,Sorted correctly
+Chase-Lev time: 17185 us
+Tasks created: 38778
+4,41,Sorted correctly
+Chase-Lev time: 18123 us
+Tasks created: 38778
+4,42,Sorted correctly
+Chase-Lev time: 18714 us
+Tasks created: 38778
+4,43,Sorted correctly
+Chase-Lev time: 17913 us
+Tasks created: 38778
+4,44,Sorted correctly
+Chase-Lev time: 18256 us
+Tasks created: 38778
+4,45,Sorted correctly
+Chase-Lev time: 18495 us
+Tasks created: 38778
+4,46,Sorted correctly
+Chase-Lev time: 18074 us
+Tasks created: 38778
+4,47,Sorted correctly
+Chase-Lev time: 18722 us
+Tasks created: 38778
+4,48,Sorted correctly
+Chase-Lev time: 18101 us
+Tasks created: 38778
+4,49,Sorted correctly
+Chase-Lev time: 18750 us
+Tasks created: 38778
+4,50,Sorted correctly
+Chase-Lev time: 18214 us
+Tasks created: 38778
+4,51,Sorted correctly
+Chase-Lev time: 18837 us
+Tasks created: 38778
+4,52,Sorted correctly
+Chase-Lev time: 18282 us
+Tasks created: 38778
+4,53,Sorted correctly
+Chase-Lev time: 17813 us
+Tasks created: 38778
+4,54,Sorted correctly
+Chase-Lev time: 18528 us
+Tasks created: 38778
+4,55,Sorted correctly
+Chase-Lev time: 18155 us
+Tasks created: 38778
+4,56,Sorted correctly
+Chase-Lev time: 18037 us
+Tasks created: 38778
+4,57,Sorted correctly
+Chase-Lev time: 18702 us
+Tasks created: 38778
+4,58,Sorted correctly
+Chase-Lev time: 18283 us
+Tasks created: 38778
+4,59,Sorted correctly
+Chase-Lev time: 18361 us
+Tasks created: 38778
+4,60,Sorted correctly
+Chase-Lev time: 18768 us
+Tasks created: 38778
+6,6,Sorted correctly
+Chase-Lev time: 13599 us
+Tasks created: 38778
+6,7,Sorted correctly
+Chase-Lev time: 13656 us
+Tasks created: 38778
+6,8,Sorted correctly
+Chase-Lev time: 13449 us
+Tasks created: 38778
+6,9,Sorted correctly
+Chase-Lev time: 14499 us
+Tasks created: 38778
+6,10,Sorted correctly
+Chase-Lev time: 13446 us
+Tasks created: 38778
+6,11,Sorted correctly
+Chase-Lev time: 13897 us
+Tasks created: 38778
+6,12,Sorted correctly
+Chase-Lev time: 14190 us
+Tasks created: 38778
+6,13,Sorted correctly
+Chase-Lev time: 14231 us
+Tasks created: 38778
+6,14,Sorted correctly
+Chase-Lev time: 13422 us
+Tasks created: 38778
+6,15,Sorted correctly
+Chase-Lev time: 13375 us
+Tasks created: 38778
+6,16,Sorted correctly
+Chase-Lev time: 14182 us
+Tasks created: 38778
+6,17,Sorted correctly
+Chase-Lev time: 13520 us
+Tasks created: 38778
+6,18,Sorted correctly
+Chase-Lev time: 13339 us
+Tasks created: 38778
+6,19,Sorted correctly
+Chase-Lev time: 13704 us
+Tasks created: 38778
+6,20,Sorted correctly
+Chase-Lev time: 13795 us
+Tasks created: 38778
+6,21,Sorted correctly
+Chase-Lev time: 13545 us
+Tasks created: 38778
+6,22,Sorted correctly
+Chase-Lev time: 14010 us
+Tasks created: 38778
+6,23,Sorted correctly
+Chase-Lev time: 13407 us
+Tasks created: 38778
+6,24,Sorted correctly
+Chase-Lev time: 13899 us
+Tasks created: 38778
+6,25,Sorted correctly
+Chase-Lev time: 13617 us
+Tasks created: 38778
+6,26,Sorted correctly
+Chase-Lev time: 13854 us
+Tasks created: 38778
+6,27,Sorted correctly
+Chase-Lev time: 13378 us
+Tasks created: 38778
+6,28,Sorted correctly
+Chase-Lev time: 13080 us
+Tasks created: 38778
+6,29,Sorted correctly
+Chase-Lev time: 14727 us
+Tasks created: 38778
+6,30,Sorted correctly
+Chase-Lev time: 13408 us
+Tasks created: 38778
+6,31,Sorted correctly
+Chase-Lev time: 13313 us
+Tasks created: 38778
+6,32,Sorted correctly
+Chase-Lev time: 13091 us
+Tasks created: 38778
+6,33,Sorted correctly
+Chase-Lev time: 13202 us
+Tasks created: 38778
+6,34,Sorted correctly
+Chase-Lev time: 13440 us
+Tasks created: 38778
+6,35,Sorted correctly
+Chase-Lev time: 12904 us
+Tasks created: 38778
+6,36,Sorted correctly
+Chase-Lev time: 13459 us
+Tasks created: 38778
+6,37,Sorted correctly
+Chase-Lev time: 13293 us
+Tasks created: 38778
+6,38,Sorted correctly
+Chase-Lev time: 13654 us
+Tasks created: 38778
+6,39,Sorted correctly
+Chase-Lev time: 13280 us
+Tasks created: 38778
+6,40,Sorted correctly
+Chase-Lev time: 13456 us
+Tasks created: 38778
+6,41,Sorted correctly
+Chase-Lev time: 13476 us
+Tasks created: 38778
+6,42,Sorted correctly
+Chase-Lev time: 13465 us
+Tasks created: 38778
+6,43,Sorted correctly
+Chase-Lev time: 12949 us
+Tasks created: 38778
+6,44,Sorted correctly
+Chase-Lev time: 13361 us
+Tasks created: 38778
+6,45,Sorted correctly
+Chase-Lev time: 14158 us
+Tasks created: 38778
+6,46,Sorted correctly
+Chase-Lev time: 13561 us
+Tasks created: 38778
+6,47,Sorted correctly
+Chase-Lev time: 12957 us
+Tasks created: 38778
+6,48,Sorted correctly
+Chase-Lev time: 13343 us
+Tasks created: 38778
+6,49,Sorted correctly
+Chase-Lev time: 13688 us
+Tasks created: 38778
+6,50,Sorted correctly
+Chase-Lev time: 13570 us
+Tasks created: 38778
+6,51,Sorted correctly
+Chase-Lev time: 13024 us
+Tasks created: 38778
+6,52,Sorted correctly
+Chase-Lev time: 12959 us
+Tasks created: 38778
+6,53,Sorted correctly
+Chase-Lev time: 13092 us
+Tasks created: 38778
+6,54,Sorted correctly
+Chase-Lev time: 13545 us
+Tasks created: 38778
+6,55,Sorted correctly
+Chase-Lev time: 13411 us
+Tasks created: 38778
+6,56,Sorted correctly
+Chase-Lev time: 13692 us
+Tasks created: 38778
+6,57,Sorted correctly
+Chase-Lev time: 13953 us
+Tasks created: 38778
+6,58,Sorted correctly
+Chase-Lev time: 13245 us
+Tasks created: 38778
+6,59,Sorted correctly
+Chase-Lev time: 13640 us
+Tasks created: 38778
+6,60,Sorted correctly
+Chase-Lev time: 13246 us
+Tasks created: 38778
+8,6,Sorted correctly
+Chase-Lev time: 11325 us
+Tasks created: 38778
+8,7,Sorted correctly
+Chase-Lev time: 10728 us
+Tasks created: 38778
+8,8,Sorted correctly
+Chase-Lev time: 11367 us
+Tasks created: 38778
+8,9,Sorted correctly
+Chase-Lev time: 11631 us
+Tasks created: 38778
+8,10,Sorted correctly
+Chase-Lev time: 11126 us
+Tasks created: 38778
+8,11,Sorted correctly
+Chase-Lev time: 11358 us
+Tasks created: 38778
+8,12,Sorted correctly
+Chase-Lev time: 10799 us
+Tasks created: 38778
+8,13,Sorted correctly
+Chase-Lev time: 11077 us
+Tasks created: 38778
+8,14,Sorted correctly
+Chase-Lev time: 10648 us
+Tasks created: 38778
+8,15,Sorted correctly
+Chase-Lev time: 10908 us
+Tasks created: 38778
+8,16,Sorted correctly
+Chase-Lev time: 11087 us
+Tasks created: 38778
+8,17,Sorted correctly
+Chase-Lev time: 10635 us
+Tasks created: 38778
+8,18,Sorted correctly
+Chase-Lev time: 11051 us
+Tasks created: 38778
+8,19,Sorted correctly
+Chase-Lev time: 10741 us
+Tasks created: 38778
+8,20,Sorted correctly
+Chase-Lev time: 11034 us
+Tasks created: 38778
+8,21,Sorted correctly
+Chase-Lev time: 11141 us
+Tasks created: 38778
+8,22,Sorted correctly
+Chase-Lev time: 11167 us
+Tasks created: 38778
+8,23,Sorted correctly
+Chase-Lev time: 10922 us
+Tasks created: 38778
+8,24,Sorted correctly
+Chase-Lev time: 10857 us
+Tasks created: 38778
+8,25,Sorted correctly
+Chase-Lev time: 10883 us
+Tasks created: 38778
+8,26,Sorted correctly
+Chase-Lev time: 10921 us
+Tasks created: 38778
+8,27,Sorted correctly
+Chase-Lev time: 10874 us
+Tasks created: 38778
+8,28,Sorted correctly
+Chase-Lev time: 11505 us
+Tasks created: 38778
+8,29,Sorted correctly
+Chase-Lev time: 11030 us
+Tasks created: 38778
+8,30,Sorted correctly
+Chase-Lev time: 10518 us
+Tasks created: 38778
+8,31,Sorted correctly
+Chase-Lev time: 11084 us
+Tasks created: 38778
+8,32,Sorted correctly
+Chase-Lev time: 11209 us
+Tasks created: 38778
+8,33,Sorted correctly
+Chase-Lev time: 11363 us
+Tasks created: 38778
+8,34,Sorted correctly
+Chase-Lev time: 10687 us
+Tasks created: 38778
+8,35,Sorted correctly
+Chase-Lev time: 11008 us
+Tasks created: 38778
+8,36,Sorted correctly
+Chase-Lev time: 10857 us
+Tasks created: 38778
+8,37,Sorted correctly
+Chase-Lev time: 10649 us
+Tasks created: 38778
+8,38,Sorted correctly
+Chase-Lev time: 10762 us
+Tasks created: 38778
+8,39,Sorted correctly
+Chase-Lev time: 10924 us
+Tasks created: 38778
+8,40,Sorted correctly
+Chase-Lev time: 10895 us
+Tasks created: 38778
+8,41,Sorted correctly
+Chase-Lev time: 11176 us
+Tasks created: 38778
+8,42,Sorted correctly
+Chase-Lev time: 11005 us
+Tasks created: 38778
+8,43,Sorted correctly
+Chase-Lev time: 10615 us
+Tasks created: 38778
+8,44,Sorted correctly
+Chase-Lev time: 10948 us
+Tasks created: 38778
+8,45,Sorted correctly
+Chase-Lev time: 10717 us
+Tasks created: 38778
+8,46,Sorted correctly
+Chase-Lev time: 11099 us
+Tasks created: 38778
+8,47,Sorted correctly
+Chase-Lev time: 11511 us
+Tasks created: 38778
+8,48,Sorted correctly
+Chase-Lev time: 10704 us
+Tasks created: 38778
+8,49,Sorted correctly
+Chase-Lev time: 10765 us
+Tasks created: 38778
+8,50,Sorted correctly
+Chase-Lev time: 11083 us
+Tasks created: 38778
+8,51,Sorted correctly
+Chase-Lev time: 11303 us
+Tasks created: 38778
+8,52,Sorted correctly
+Chase-Lev time: 11020 us
+Tasks created: 38778
+8,53,Sorted correctly
+Chase-Lev time: 10983 us
+Tasks created: 38778
+8,54,Sorted correctly
+Chase-Lev time: 11015 us
+Tasks created: 38778
+8,55,Sorted correctly
+Chase-Lev time: 10544 us
+Tasks created: 38778
+8,56,Sorted correctly
+Chase-Lev time: 11387 us
+Tasks created: 38778
+8,57,Sorted correctly
+Chase-Lev time: 11782 us
+Tasks created: 38778
+8,58,Sorted correctly
+Chase-Lev time: 10824 us
+Tasks created: 38778
+8,59,Sorted correctly
+Chase-Lev time: 11407 us
+Tasks created: 38778
+8,60,Sorted correctly
+Chase-Lev time: 11083 us
+Tasks created: 38778
+12,6,Sorted correctly
+Chase-Lev time: 9584 us
+Tasks created: 38778
+12,7,Sorted correctly
+Chase-Lev time: 8931 us
+Tasks created: 38778
+12,8,Sorted correctly
+Chase-Lev time: 9495 us
+Tasks created: 38778
+12,9,Sorted correctly
+Chase-Lev time: 8865 us
+Tasks created: 38778
+12,10,Sorted correctly
+Chase-Lev time: 9086 us
+Tasks created: 38778
+12,11,Sorted correctly
+Chase-Lev time: 9148 us
+Tasks created: 38778
+12,12,Sorted correctly
+Chase-Lev time: 8518 us
+Tasks created: 38778
+12,13,Sorted correctly
+Chase-Lev time: 8652 us
+Tasks created: 38778
+12,14,Sorted correctly
+Chase-Lev time: 8218 us
+Tasks created: 38778
+12,15,Sorted correctly
+Chase-Lev time: 8745 us
+Tasks created: 38778
+12,16,Sorted correctly
+Chase-Lev time: 9340 us
+Tasks created: 38778
+12,17,Sorted correctly
+Chase-Lev time: 9199 us
+Tasks created: 38778
+12,18,Sorted correctly
+Chase-Lev time: 9281 us
+Tasks created: 38778
+12,19,Sorted correctly
+Chase-Lev time: 9219 us
+Tasks created: 38778
+12,20,Sorted correctly
+Chase-Lev time: 9370 us
+Tasks created: 38778
+12,21,Sorted correctly
+Chase-Lev time: 9614 us
+Tasks created: 38778
+12,22,Sorted correctly
+Chase-Lev time: 9083 us
+Tasks created: 38778
+12,23,Sorted correctly
+Chase-Lev time: 9166 us
+Tasks created: 38778
+12,24,Sorted correctly
+Chase-Lev time: 9158 us
+Tasks created: 38778
+12,25,Sorted correctly
+Chase-Lev time: 9166 us
+Tasks created: 38778
+12,26,Sorted correctly
+Chase-Lev time: 9303 us
+Tasks created: 38778
+12,27,Sorted correctly
+Chase-Lev time: 9231 us
+Tasks created: 38778
+12,28,Sorted correctly
+Chase-Lev time: 9323 us
+Tasks created: 38778
+12,29,Sorted correctly
+Chase-Lev time: 8840 us
+Tasks created: 38778
+12,30,Sorted correctly
+Chase-Lev time: 9089 us
+Tasks created: 38778
+12,31,Sorted correctly
+Chase-Lev time: 8970 us
+Tasks created: 38778
+12,32,Sorted correctly
+Chase-Lev time: 9194 us
+Tasks created: 38778
+12,33,Sorted correctly
+Chase-Lev time: 9035 us
+Tasks created: 38778
+12,34,Sorted correctly
+Chase-Lev time: 8585 us
+Tasks created: 38778
+12,35,Sorted correctly
+Chase-Lev time: 8484 us
+Tasks created: 38778
+12,36,Sorted correctly
+Chase-Lev time: 8607 us
+Tasks created: 38778
+12,37,Sorted correctly
+Chase-Lev time: 8709 us
+Tasks created: 38778
+12,38,Sorted correctly
+Chase-Lev time: 9002 us
+Tasks created: 38778
+12,39,Sorted correctly
+Chase-Lev time: 8672 us
+Tasks created: 38778
+12,40,Sorted correctly
+Chase-Lev time: 8927 us
+Tasks created: 38778
+12,41,Sorted correctly
+Chase-Lev time: 9263 us
+Tasks created: 38778
+12,42,Sorted correctly
+Chase-Lev time: 8720 us
+Tasks created: 38778
+12,43,Sorted correctly
+Chase-Lev time: 8808 us
+Tasks created: 38778
+12,44,Sorted correctly
+Chase-Lev time: 8553 us
+Tasks created: 38778
+12,45,Sorted correctly
+Chase-Lev time: 9064 us
+Tasks created: 38778
+12,46,Sorted correctly
+Chase-Lev time: 8763 us
+Tasks created: 38778
+12,47,Sorted correctly
+Chase-Lev time: 9316 us
+Tasks created: 38778
+12,48,Sorted correctly
+Chase-Lev time: 8969 us
+Tasks created: 38778
+12,49,Sorted correctly
+Chase-Lev time: 9094 us
+Tasks created: 38778
+12,50,Sorted correctly
+Chase-Lev time: 10745 us
+Tasks created: 38778
+12,51,Sorted correctly
+Chase-Lev time: 9282 us
+Tasks created: 38778
+12,52,Sorted correctly
+Chase-Lev time: 9158 us
+Tasks created: 38778
+12,53,Sorted correctly
+Chase-Lev time: 9391 us
+Tasks created: 38778
+12,54,Sorted correctly
+Chase-Lev time: 10903 us
+Tasks created: 38778
+12,55,Sorted correctly
+Chase-Lev time: 8928 us
+Tasks created: 38778
+12,56,Sorted correctly
+Chase-Lev time: 8536 us
+Tasks created: 38778
+12,57,Sorted correctly
+Chase-Lev time: 8308 us
+Tasks created: 38778
+12,58,Sorted correctly
+Chase-Lev time: 8915 us
+Tasks created: 38778
+12,59,Sorted correctly
+Chase-Lev time: 8904 us
+Tasks created: 38778
+12,60,Sorted correctly
+Chase-Lev time: 9735 us
+Tasks created: 38778

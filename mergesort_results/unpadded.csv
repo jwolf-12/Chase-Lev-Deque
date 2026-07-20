@@ -1,0 +1,52 @@
+threads,run,time_ms
+1,6,Sorted correctly
+Chase-Lev time: 64740 us
+Tasks created: 38778
+1,7,Sorted correctly
+Chase-Lev time: 66712 us
+Tasks created: 38778
+1,8,Sorted correctly
+Chase-Lev time: 66443 us
+Tasks created: 38778
+1,9,Sorted correctly
+Chase-Lev time: 70156 us
+Tasks created: 38778
+1,10,Sorted correctly
+Chase-Lev time: 65887 us
+Tasks created: 38778
+1,11,Sorted correctly
+Chase-Lev time: 66635 us
+Tasks created: 38778
+1,12,Sorted correctly
+Chase-Lev time: 67408 us
+Tasks created: 38778
+1,13,Sorted correctly
+Chase-Lev time: 65671 us
+Tasks created: 38778
+1,14,Sorted correctly
+Chase-Lev time: 69017 us
+Tasks created: 38778
+1,15,Sorted correctly
+Chase-Lev time: 65543 us
+Tasks created: 38778
+1,16,Sorted correctly
+Chase-Lev time: 68266 us
+Tasks created: 38778
+1,17,Sorted correctly
+Chase-Lev time: 66383 us
+Tasks created: 38778
+1,18,Sorted correctly
+Chase-Lev time: 65232 us
+Tasks created: 38778
+1,19,Sorted correctly
+Chase-Lev time: 65613 us
+Tasks created: 38778
+1,20,Sorted correctly
+Chase-Lev time: 66645 us
+Tasks created: 38778
+1,21,Sorted correctly
+Chase-Lev time: 66025 us
+Tasks created: 38778
+1,22,Sorted correctly
+Chase-Lev time: 65984 us
+Tasks created: 38778

@@ -1,143 +1,247 @@
-# Chase-Lev Deque: `lastTop` Caching Optimization — Benchmark Results
+# Chase-Lev Work-Stealing Deque — Project Overview
 
-## What was tested
+## What this is
 
-cited directly from the paper:
-Unlike the original ABP algorithm, the new algorithm requires reading top on every execution of the pushBottom
-operation. This may result in more data-cache misses compared to the original algorithm (recall that unlike bottom,
-top is modified by all processes).
-The frequency of accesses to the top variable can be significantly reduced, by keeping a local upper bound on the
-size of the deque, and only read top when the upper bound indicates that an array expansion may be necessary. Such a
-local upper bound can be easily achieved by saving the last value of top read in a local variable, and using this variable to compute the size of the deque (instead of the real value of top). Because top is never decremented, the real size of the deque can only be smaller than the one calculated using this local variable.
+A C++ implementation of the Chase-Lev lock-free work-stealing deque (Chase & Lev,
+2005), built as a portfolio project for quant-dev / low-latency systems interviews.
+One owner thread pushes and pops from the "bottom" of the deque; any number of
+"thief" threads concurrently steal from the "top." The design goal — and the actual
+value proposition over a lock-based task queue — is that the owner's hot-path
+operations (`pushBottom`, `popBottom`) never take a lock and, in the uncontended
+case, involve no atomic contention at all, while thieves race each other and the
+owner using compare-and-swap rather than blocking.
 
-This was implemented by using a non atomic variable `lastTop`. It is updated in these steps:
-1) Right after reading `top` in `popBottom`
-2) Right after `cas` in `popBottom`
-3) There is an additional added check if `lastTop` indicates the the array needs to grow. There, `top` is read and `lastTop` is updated.
+## Core design
 
-## Test setup
+- **Fixed-shape circular buffer, dynamically resized.** `top` and `bottom` are
+  atomic counters; the active array is swapped out (not resized in place) when it
+  needs to grow or shrink, using the same array-doubling/halving strategy the
+  original paper describes.
+- **CAS-based contested-element resolution.** The one genuinely hard case in the
+  whole algorithm — a thief and the owner racing over the single last element in
+  the deque — is resolved by a compare-and-swap on `top`: whichever side's CAS
+  succeeds legitimately owns that element, and the loser's speculative read is
+  discarded.
+- **Dynamic growth and shrinking**, following the paper's low-water-mark logic and
+  the `size % array.size() == 0` sentinel thieves use to detect an in-progress
+  shrink without misreporting the deque as non-empty.
 
-- **Hardware**: WSL2 (Ubuntu), 16 logical cores (`nproc`)
-- **Compiler**: g++, `-pthread`
-- **Workload**: single owner thread pushing sequential `int` tasks; N thief threads
-  concurrently calling `steal()`
-- **Correctness check**: every run verified 0 duplicates and 0 missing tasks
-- **Metric**: wall-clock time for the owner's full push loop, via `std::chrono`
-- **Methodology**: 50 runs per configuration; first 5 runs of each set discarded as
-  warm-up noise; median reported (median chosen over mean because a handful of runs
-  in every set showed OS-scheduling-induced spikes 2–3x the typical value — median is
-  far less sensitive to those outliers than the mean)
+## What's been built and validated, roughly in the order it happened
 
-## Results
+1. **Base algorithm** — atomic top/bottom, CAS-based steal, correct resolution of
+   the contested last-element race. An initial task-loss bug (3–10% of tasks
+   silently dropped under contention, no duplicates) was found via a randomized
+   multithreaded stress-testing harness and fixed — the read-before-CAS ordering
+   in `steal`/`popBottom` had been backwards.
+2. **Dynamic growth and shrinking** (`perhapsShrink`), letting the deque's memory
+   footprint track its actual current backlog instead of its historical peak.
+3. **`lastTop` caching optimization** (from the paper's own discussion of reducing
+   contended reads of `top` on the `pushBottom` hot path) — benchmarked at ~5%
+   faster under low contention, ~1–2% under high contention. A real latent bug was
+   found here too: an early version relied on `popBottom` incidentally refreshing
+   the cache, which passed every test under one specific call pattern and only
+   broke once a workload was built that didn't happen to exercise that pattern —
+   see `SHRINK_BENCHMARK.md` for the full account.
+4. **Shrink threshold (K) tradeoff sweep** — a parameter sweep across K=3–12 on a
+   custom oscillating push/drain workload, showing 37–67% average memory reduction
+   with no measurable throughput cost across the whole range tested. See
+   `SHRINK_BENCHMARK.md`.
+5. **Explicit acquire/release/relaxed memory ordering**, replacing the default
+   `seq_cst` on every atomic operation with the weakest ordering each one actually
+   needs — `seq_cst` retained only on the two contested `top` CAS operations, per
+   the weak-memory-models literature. Benchmarked ~23% throughput improvement over
+   the all-`seq_cst` baseline. See `MEMORY_ORDERING_AND_TSAN.md`.
+6. **ThreadSanitizer validation** — confirmed `top`, `bottom`, and the active-array
+   pointer (all genuine synchronization state) are race-free. The one race tsan
+   does flag is the algorithm's own by-design unsynchronized element read, a known,
+   published gap in naive C++ ports of Chase-Lev (documented in the C++ standards
+   committee's P0690 "Tearable Atomics" proposal) — not a defect. See
+   `MEMORY_ORDERING_AND_TSAN.md`.
+7. **Parallel merge sort benchmark against a mutex-based task queue** — demonstrated
+   scalability on a realistic workload (not just a synthetic push/steal loop),
+   showing speedup grow from roughly parity at 2 threads to ~1.65× at 12 threads.
+   See `MERGESORT_AND_FENCES.md`.
+8. **SC fences closing an IRIW-style gap** between `top` and `bottom` that plain
+   acquire/release doesn't cover on weak-memory hardware, following Lê, Pop, Cohen
+   & Nardelli's C11 formalization of Chase-Lev. See `MERGESORT_AND_FENCES.md`.
 
-### Configuration 1: 4 thief threads, 10,000 tasks
+## Known, deliberately scoped-out extensions
 
-| Version | Median (50 runs, first 5 dropped) | us/task |
-|---|---|---|
-| Uncached (`top.load()` every push) | 4,590 us | 0.459 |
-| Cached (`lastTop`) | 4,370 us | 0.437 |
+- **Shared buffer pool** (Section 4 of the original paper) — reusing reclaimed
+  array buffers across grow/shrink cycles instead of the current approach, which
+  keeps every array level allocated for the deque's lifetime.
+- **Hazard pointers** for safe memory reclamation, as a more general alternative to
+  the shared-pool approach.
+- **Multi-level shrink-skipping** — jumping directly from a distant ancestor array
+  size to a much smaller one in one step when the backlog has collapsed, rather
+  than shrinking one level at a time, with low-water-marks aggregated across every
+  array level being skipped.
 
-**Cached version: ~4.8% faster.**
-
-### Configuration 2: 12 thief threads, 100,000 tasks
-
-| Version | Run | Median (50 runs, first 5 dropped) |
-|---|---|---|
-| Uncached | Run 1 | 83,568 us |
-| Uncached | Run 2 | 83,464 us |
-| Cached | Run 1 | 82,000 us |
-| Cached | Run 2 | 82,699 us |
-
-**Cached version: ~1–2.5% faster** — consistently below both uncached runs across
-repeated trials, but a noticeably smaller margin than at lower contention.
-
-## Interpretation
-
-The optimization produces a real, directionally consistent speedup in every
-configuration tested — cached never came out slower than uncached in any run — but
-the magnitude shrinks as thread count and task count scale up (from ~5% at 4
-threads/10k tasks to ~1–2% at 12 threads/100k tasks).
-
-The most likely explaination: These benchmarks were run on WSL2 (Windows Subsystem for Linux), not bare-metal. WSL2 adds its own virtualization/scheduling overhead, which becomes more noticeable as thread contention increases. This overhead can mask or shrink the measured benefit of this technique, since the technique's savings come from reducing cache-coherence traffic — a relatively small effect that's easier to see when there's less other noise in the system. On bare-metal, many-core hardware (closer to what the original paper used), the performance gap is likely to be larger and more consistent.
-
-## A correctness lesson from implementing this
-
-In the initial implementation, when lastTop signaled that the array needed to grow, the code proceeded to grow it without first re-checking the actual, current value of top. In other words, it trusted the cached/stale lastTop value as sufficient justification to trigger a resize, rather than confirming against the real, up-to-date state of top before committing to that expensive operation.
-This mattered because lastTop could be out of date — the real top might have already changed (for example, due to concurrent access, prior operations, or timing) by the time the growth check ran. Since there was no verification step comparing lastTop against the true current top, the implementation ended up growing the array more often than necessary, including in cases where a fresh check would have shown that growth wasn't actually needed yet.
-Because array growth is a relatively expensive operation (allocating new memory, copying existing elements over, etc.), triggering it unnecessarily — or more frequently than required — introduced significant overhead. This unnecessary/excessive growing became a major performance bottleneck, resulting in the "huge grow overhead" observed.
+These are understood in depth (see the design discussion in project notes) but not
+implemented, in favor of prioritizing the memory-ordering and benchmarking work
+above, which more directly demonstrates the kind of correctness reasoning this
+project is meant to showcase.
 
 
-# Chase-Lev Deque: Shrink Logic — Throughput vs. Memory Tradeoff
+# Chase-Lev Deque: Shrink Logic — Throughput vs. Array Buffer Size Tradeoff
 
 Unlike the `lastTop` caching optimization, shrinking is not primarily a speed
 optimization — every shrink event costs real work (allocate a smaller array, copy
 live elements, perform the bottom/top-shift synchronization the paper proves safe
-against concurrent thieves, free the old buffer). The expected benefit is memory
-footprint, not throughput: an array that grows to accommodate a burst of work should
-give that memory back once the burst drains, rather than holding onto peak-sized
-memory forever.
+against concurrent thieves, free the old buffer). The expected benefit is a smaller
+*active array buffer*, not throughput: an array that grows to accommodate a burst of
+work should give that buffer back down once the burst drains, rather than holding
+onto peak-sized capacity forever.
+
+**A precision worth being explicit about**: the metric below (`array_size`) measures
+the deque's own logical buffer size — how large the currently-active `CircularArray`
+is — not total OS-level process memory. The claim this benchmark supports is
+specifically: **shrinking keeps the deque's own array buffer sized to its current
+backlog instead of its historical peak** — a real, useful property for a scheduler
+running many deques that share a fixed memory budget — not a claim about total
+process memory usage.
 
 This benchmark sweeps the shrink threshold constant `K` (from `perhapsShrink`'s
 trigger condition `size < array.size() / K`) to map out how aggressively shrinking
-trades memory savings against throughput cost.
+trades array buffer size against throughput cost.
+
+> **Note on data provenance:** an earlier pass of this benchmark was run before
+> epoch-based reclamation (below) was added to the shrink path. That data is
+> discarded and superseded by the numbers here. Epoch reclamation adds real
+> per-steal and per-shrink bookkeeping, so throughput numbers from before it
+> existed are not comparable to the current implementation — the table and
+> interpretation below reflect the deque as it stands today, shrink logic and
+> epoch reclamation together.
 
 ## Test setup
 
 - **Hardware**: WSL2 (Ubuntu), 16 logical cores
-- **Compiler**: g++, `-O2 -pthread`
+- **Compiler**: g++, `-std=c++17 -O2 -pthread`
+- **Implementation under test**: shrink logic with epoch-based reclamation active
+  (see below) — not the pre-epoch never-free version
 - **Workload**: an oscillating push/drain pattern — 20 bursts, each pushing 2,000
   tasks then draining 1,900 via `popBottom` — with 4 thief threads also stealing
   concurrently throughout
 - **Instrumentation**: `array_size` logged after every burst; owner-loop wall-clock
   time logged per run
 - **Sample size**: 60 full program runs per configuration (1,200 burst-size samples
-  per configuration), after an earlier 30-run pass showed the memory metric needed a
-  larger sample to separate real trend from noise
+  per configuration)
 - **Correctness check**: every run verified 0 duplicates and 0 missing tasks
-- **Metric**: mean `array_size` across all burst samples (memory), mean `us/task`
-  across all runs (throughput) — computed with a small script rather than by hand, to
-  avoid transcription error across the ~7,200 total data points collected
+- **Metric**: mean `array_size` across all burst samples (buffer size), mean
+  `us/task` across all runs (throughput) — computed with a small script rather than
+  by hand, to avoid transcription error across the full set of data points collected
 
 Note on `K`: a **smaller** `K` makes the trigger threshold `array.size()/K` larger,
 so the deque shrinks *more* aggressively; a **larger** `K` is more conservative.
 
 ## Results
 
-| Config | Avg throughput (us/task) | Avg array_size (memory) | Memory vs. no-shrink |
+| Config | Avg throughput (us/task) | Avg array_size (buffer) | Buffer size vs. no-shrink |
 |---|---|---|---|
-| No shrink (baseline) | 0.253 | 2068.5 | — |
-| K=3 | 0.266 | 676.3 | −67.3% |
-| K=4 | 0.273 | 779.2 | −62.3% |
-| K=6 | 0.248 | 1012.4 | −51.1% |
-| K=8 | 0.266 | 1117.6 | −46.0% |
-| K=12 | 0.272 | 1289.8 | −37.6% |
+| No shrink (baseline) | 0.0917 | 2228.9 | — |
+| K=3 | 0.1069 | 663.1 | −70.3% |
+| K=4 | 0.1027 | 771.9 | −65.4% |
+| K=5 | 0.1037 | 896.9 | −59.8% |
+| K=8 | 0.1034 | 937.1 | −58.0% |
+| K=12 | 0.1035 | 1084.1 | −51.4% |
 
-![Throughput vs memory tradeoff across K values](shrink_tradeoff.png)
+![Throughput vs array buffer size tradeoff, post-epoch-reclamation](shrink_tradeoff.png)
 
 ## Interpretation
 
-**Memory scales cleanly and predictably with K.** As K increases from 3 to 12, the
-threshold for triggering a shrink gets stricter, and average array size climbs
-monotonically back toward the no-shrink baseline (676 → 779 → 1012 → 1118 → 1290,
-approaching 2068.5). This is exactly the expected behavior — K is a direct dial on
-how tightly the deque's footprint tracks its actual current backlog versus its
-historical peak.
+**Array buffer size still scales cleanly and predictably with K.** As K increases
+from 3 to 12, the threshold for triggering a shrink gets stricter, and average
+array size climbs monotonically back toward the no-shrink baseline (663 → 772 → 897
+→ 938 → 1084, approaching 2228.9). That part of the picture hasn't changed from
+before epoch reclamation was added — K is still a direct dial on how tightly the
+deque's active buffer tracks its actual current backlog versus its historical peak.
 
-**Throughput does not meaningfully trade off against K on this workload.** Every
-configuration tested — from the most aggressive (K=3) to the most conservative
-(K=12) — measured within a narrow 0.248–0.273 us/task band, statistically
-indistinguishable from the 0.253 us/task no-shrink baseline. Even the most aggressive
-shrinking setting, which cuts average memory by two-thirds, showed no measurable
-throughput penalty.
+**Throughput stays close to flat in practical terms, though there's a small,
+consistent gap versus the pre-epoch numbers.** Every shrink-enabled configuration
+lands in a 0.1027–0.1069 us/task band, against a 0.0917 us/task no-shrink baseline —
+on the same 0–0.40 us/task scale used throughout this project's charts, that gap is
+easy to miss, and visually the picture looks a lot like the earlier (discarded)
+pre-epoch result: shrinking doesn't meaningfully change the shape of the throughput
+line, which stays essentially flat across every K tested. Put in relative terms,
+though, shrink-enabled configs do sit measurably above baseline — roughly 12–17%
+higher us/task — so "flat" here means flat *in absolute, practical terms at this
+task granularity*, not that the two implementations are indistinguishable if you
+zoom in. Whether that relative gap matters depends entirely on how tight your actual
+throughput budget is; at this workload's scale, it's easy to overlook.
 
-**Practical takeaway**: on this hardware and workload, K functions less like a true
-throughput-vs-memory tradeoff knob and more like a pure memory-aggressiveness dial —
-the throughput axis stays essentially flat across the whole range. This suggests that
-for a work-stealing scheduler with many deques sharing limited total memory (the
-scenario the paper's own motivation describes — "for n processes and total allocated
-memory size m, one can tolerate at most m/n items in a deque"), there is little
-reason to avoid aggressive shrinking (low K) purely on throughput grounds; the memory
-savings are close to free at this scale of contention and task granularity.
+**Within the shrink-enabled configs, throughput barely moves with K.** K=4, K=5,
+K=8, and K=12 all cluster tightly around 0.103–0.104 us/task regardless of how
+aggressively each one shrinks, with only the most aggressive setting tested (K=3)
+standing out slightly higher, at 0.1069. That suggests whatever small throughput
+cost epoch reclamation adds is mostly a cost of *having shrinking active at all*,
+rather than something that scales smoothly with *how often* a shrink actually
+fires.
+
+**Practical takeaway**: with epoch-based reclamation in place, shrinking carries a
+small, consistent throughput cost relative to never shrinking at all — roughly
+12–17% in relative terms — but on the same absolute scale used throughout this
+project's benchmarks, that cost is easy to miss and the throughput line still reads
+as essentially flat, much like the pre-epoch data did. In exchange, buffer savings
+still range from about 51% to 70% depending on K. For a scheduler running many
+deques under a shared memory budget, that remains a good trade in most cases — the
+difference from the earlier framing is just that "close to free" should now be read
+as "small and fairly fixed" rather than "measured zero," and it's worth weighing
+against how tightly memory is actually constrained rather than assumed away
+entirely.
+
+## Epoch-based reclamation: freeing retired buffers safely
+
+The shrink logic swaps `curr` to a smaller, previously-allocated array on each
+shrink. A naive version of this never actually `delete`s an old array once the
+owner has grown past it — every array level stays allocated for the deque's entire
+lifetime. That's safe (no thief can ever hold a dangling pointer) but means buffer
+savings never translate into freed process memory.
+
+Epoch-based reclamation closes this gap: each thief publishes its current global
+epoch before touching the active array and clears it after, and a retired buffer
+(one the owner has shrunk away from) is only `delete`d once no thief's published
+epoch predates the buffer's retirement — the same underlying idea as hazard
+pointers or RCU, applied at the granularity of one epoch counter per thief slot
+rather than per-pointer. This is the version benchmarked above.
+
+### Validation: AddressSanitizer with an injected race window
+
+To check the mechanism actually prevents a real use-after-free (rather than just
+"not crashing," which — per the discussion of x86's strong memory model elsewhere
+in this project — is not by itself strong evidence of correctness), an artificial
+delay was inserted into `steal()` between the moment a thief captures the active
+array pointer and the moment it actually dereferences it, deliberately widening the
+exact race window the epoch mechanism exists to protect against. The owner was
+driven through many rapid grow/shrink cycles concurrently with this artificially
+slowed thief.
+
+Compiled and run with:
+```
+g++ -std=c++17 -O1 -g -fsanitize=address -DSIMULATE_SLOW_THIEF -pthread tester.cpp -o safe_asan
+```
+
+**Result: no use-after-free detected across multiple runs.** AddressSanitizer did
+flag "leaked" allocations, but these are the expected, by-design permanently
+retained grow-side arrays (the same ones present even without epoch reclamation) —
+not evidence of a problem, and orthogonal to the use-after-free question this test
+was actually checking.
+
+### What this does and does not establish
+
+A clean AddressSanitizer run under an artificially widened race window is genuine,
+meaningful evidence that the epoch mechanism correctly holds a buffer alive for as
+long as any thief might still be touching it. It does not, on its own, prove the
+*original* never-free design was ever unsafe in the first place — reasoning through
+that question directly: a thief's steal only succeeds if its `top`
+compare-and-swap confirms the index it read was still live at that instant, and any
+correctly-implemented `grow`/`copyinto` is obligated to preserve a still-live
+index's data on every reactivation of a given array object, regardless of how many
+times that physical buffer gets reused. The real, distinct risk epoch reclamation
+addresses is a different one: once the design actually starts calling `delete`
+(which the original never-free version never did), a slow thief holding a stale
+pointer into a buffer that gets freed out from under it is a genuine
+use-after-free — and that is precisely the scenario this test was built to expose.
+
 
 
 # Chase-Lev Deque: Memory Ordering & ThreadSanitizer Validation
@@ -236,3 +340,133 @@ confirmed race-free under ThreadSanitizer. The one remaining flagged race is the
 algorithm's inherent, literature-documented unsynchronized element read, not an
 implementation defect.
 
+
+
+# Chase-Lev Deque: Merge Sort Scalability Benchmark & SC Fences
+
+## Part 1: Parallel merge sort vs. a mutex-based task queue
+
+To demonstrate the deque's scalability in a realistic setting (not just a synthetic
+push/steal microbenchmark), a parallel merge sort was built on top of it and
+compared against a functionally identical implementation using a global
+`std::queue` + `std::mutex` + `std::condition_variable` as the task pool.
+
+### Design
+
+- Array of `N = 1,000,000` random ints, sorted via task-based parallel merge sort.
+- **Split phase**: recursively halve the range into `SPLIT` tasks down to `CUTOFF`
+  elements, then sort sequentially.
+- **Merge phase**: for ranges above `PARALLEL_MERGE_THRESHOLD` (4096), merging
+  itself is parallelized using a CLRS-style parallel merge — repeatedly splitting
+  the larger of the two runs at its midpoint, binary-searching the matching split
+  point in the other run, and recursing on two independent halves — rather than
+  doing one large sequential merge on a single core.
+- **Chase-Lev version**: one deque per worker thread; a worker pushes new subtasks
+  onto its own deque and steals from others (round-robin victim selection) when its
+  own deque is empty.
+- **Mutex version**: identical task/merge logic, but all workers share one global
+  queue guarded by a mutex, with `condition_variable` blocking (not busy-waiting)
+  when no task is available — a genuinely competitive, non-strawman baseline.
+- Both versions confirmed correct (`is_sorted` check) before any number was trusted.
+
+A real bug surfaced and was fixed during development: an early version had merge
+leaves copy their result back into the shared array immediately, which raced
+against sibling merge tasks still reading from that same array for their own
+split-point binary search — corrupting data mid-computation (manifesting as both
+sort failures and, less predictably, hangs, since corrupted data fed into split-point
+calculations produced a non-deterministic task tree even with a fixed random seed).
+The fix: merge leaves write only to a scratch buffer; the entire parallel-merge
+subtree performs one single, safe copy-back to the shared array only once its root
+task completes.
+
+### Result 1 — scaling with thread count (CUTOFF = 1024, 38,778 tasks)
+
+| Threads | Mutex Queue Median | Chase-Lev Median | Speedup |
+|---:|---:|---:|---:|
+| 2 | 50.82 ms | 49.12 ms | 1.03× |
+| 4 | 28.16 ms | 26.11 ms | 1.08× |
+| 6 | 22.10 ms | 18.90 ms | 1.17× |
+| 8 | 21.81 ms | 14.96 ms | 1.46× |
+| 12 | 23.60 ms | 14.34 ms | 1.65× |
+
+At low thread count, the two are nearly tied — there's little contention for either
+mechanism to fight over. As thread count climbs, the mutex's serialization cost
+compounds while Chase-Lev's lock-free steals barely degrade, producing a widening,
+monotonic speedup — the textbook argument for work-stealing, demonstrated
+empirically rather than asserted.
+
+### Result 2 — cutoff sensitivity (8 threads fixed)
+
+| Cutoff | Tasks Created | Chase-Lev Median | Mutex Queue Median | Speedup |
+|---:|---:|---:|---:|---:|
+| 256 | 44,922 | 16.90 ms | 24.24 ms | 1.43× |
+| 512 | 40,826 | 15.21 ms | — | — |
+| 1024 | 38,778 | **14.96 ms** | 21.81 ms | 1.46× |
+| 2048 | 37,754 | 16.11 ms | 23.64 ms | 1.47× |
+| 4096 | 37,242 | 15.20 ms | 20.86 ms | 1.37× |
+
+Speedup peaks around cutoff 1024–2048 and tapers on both sides — too small a
+cutoff means per-task bookkeeping overhead (atomic increments, deque push/steal)
+starts to dominate real work; too large a cutoff sacrifices parallelism granularity,
+compressing both curves toward each other. 1024 was chosen as the working
+configuration for Result 1 based on this sweep, not an arbitrary default.
+
+## Part 2: SC fences — closing the IRIW gap
+
+After the deque's core operations were tuned with explicit `acquire`/`release`/
+`relaxed` ordering (see the memory-ordering benchmark writeup), two
+`atomic_thread_fence(memory_order_seq_cst)` calls were added: one between `steal`'s
+`top` read and `bottom` read, and one between `popBottom`'s `bottom` write and its
+later `top` read.
+
+### Why acquire/release alone isn't sufficient here
+
+`acquire`/`release` only guarantees ordering between the two threads *directly*
+synchronizing on one variable — it does not guarantee that a *third* thread agrees
+on the relative order of operations on *different* variables. This is the classic
+IRIW (Independent Reads of Independent Writes) anomaly: two threads can each have a
+locally self-consistent, acquire/release-valid view of `top` and `bottom`, while
+still disagreeing with each other about which happened first — even though the
+`top` CAS itself is already `seq_cst` and correctly arbitrates who wins a given
+index.
+
+The fences close this specific gap by forcing the owner's `bottom`-then-`top`
+sequence and a thief's `top`-then-`bottom` sequence to both participate in one
+single, globally-agreed order — ruling out the scenario where the owner and a
+thief simultaneously believe they've each legitimately claimed the same element.
+This placement follows Lê, Pop, Cohen & Nardelli's "Correct and Efficient
+Work-Stealing for Weak Memory Models," which identifies this exact gap in naive
+acquire/release ports of Chase-Lev to C++11/C11.
+
+### Why this wasn't (and likely couldn't be) caught by testing alone
+
+Tens of thousands of runs on this project's development hardware (x86-64, under
+WSL2) produced zero observable failures without the fences. This is expected, not
+reassuring: x86-64's TSO (total store order) memory model is strong enough to
+forbid most of the reorderings this gap depends on, as a hardware guarantee
+independent of the C++ code's memory-order tags. A build that's technically
+under-synchronized per the C++ standard can still be "accidentally correct" on
+x86 for this reason. The anomaly is only reachable in practice on genuinely
+weak-memory architectures (ARM, POWER) — which is precisely why it took a formal
+paper, rather than testing, to surface it in the first place. The fences were
+added to satisfy the C++ standard's actual memory model guarantees, not to fix an
+observed failure.
+
+## Cache-Line Padding: Padded vs Unpadded Benchmark
+
+To test whether false sharing between `top` and `bottom` was a meaningful bottleneck, both fields were given `alignas(64)` cache-line padding, and the parallel merge sort benchmark was re-run across thread counts 1–12 (60 runs per configuration, first 5 discarded as warm-up noise) with padding on and off, back-to-back in the same session.
+
+### Results (median time, microseconds)
+
+| Threads | Unpadded | Padded | Difference |
+|---|---|---|---|
+| 1  | 62518 | 61433 | -1.74% |
+| 2  | 31278 | 31726 | +1.43% |
+| 4  | 18281 | 18319 | +0.21% |
+| 6  | 13452 | 13459 | +0.05% |
+| 8  | 11111 | 11008 | -0.93% |
+| 12 | 9048  | 9083  | +0.39% |
+
+### Conclusion
+
+Padding produced **no statistically meaningful difference** at any thread count tested — every delta is under 2%, well within normal run-to-run variance, and the direction is inconsistent (padding is marginally faster at 1 and 8 threads, marginally slower at 2/4/6/12). This suggests that for this workload, false sharing on `top`/`bottom` was not the dominant contention point; the bottleneck is more likely elsewhere in the work-stealing/merge logic. The padding was kept in the implementation as a documented, tested consideration, but is not claimed as a performance win.

@@ -26,12 +26,60 @@ private:
 
     size_t lastTop=0;
 
+    static constexpr size_t MAX_THIEVES = 64;
+    inline static atomic<int> nextSlot{0};
+    inline static thread_local int mySlotCache = -1;
+
+    int getMySlot(){
+        if(mySlotCache == -1){
+            mySlotCache = nextSlot.fetch_add(1, memory_order_relaxed);
+        }
+        return mySlotCache;
+    }
+
+    struct alignas(64) PaddedEpoch {
+        atomic<uint64_t> value{UINT64_MAX};
+    };
+    PaddedEpoch thiefEpoch[MAX_THIEVES];
+
+    atomic<uint64_t> globalEpoch{0};
+
+    struct RetiredBuffer { CircularArray* buf; uint64_t epoch; };
+    vector<RetiredBuffer> retireList;
+
+    void retire(CircularArray* buf){
+        uint64_t epoch = globalEpoch.fetch_add(1, memory_order_seq_cst) + 1;
+        retireList.push_back({buf, epoch});
+    }
+
+    void reclaim(){
+        for(auto it=retireList.begin(); it!= retireList.end(); ){
+            bool safe=true;
+            for(size_t i=0;i<MAX_THIEVES;i++){
+                uint64_t e=thiefEpoch[i].value.load(memory_order_seq_cst);
+                if(e!=UINT64_MAX && e<it->epoch){
+                    safe=false;
+                    break;
+                }
+            }
+            if(safe){
+                delete it->buf;
+                it=retireList.erase(it);
+            } else {
+                it++;
+            }
+        }
+    }
+
     void perhapsShrink(size_t b,size_t t){
         if(log_capacity>initial_log_size && b-t<curr.load(memory_order_acquire)->size()/K){
             shrinkCount++;
             curr.load(memory_order_acquire)->copyinto(bottoms[log_capacity-1],b,arrays[log_capacity-1]);
             log_capacity--;
             curr.store(arrays[log_capacity],memory_order_release);
+            retire(arrays[log_capacity+1]);
+            reclaim();
+            arrays[log_capacity+1]=nullptr;
         }
     }
 
@@ -77,6 +125,10 @@ public:
 
     void steal(int& task){
 
+        int slot = getMySlot();
+        thiefEpoch[slot].value.store(globalEpoch.load(memory_order_seq_cst), memory_order_seq_cst);
+
+
         size_t t=top.load(memory_order_acquire);
         atomic_thread_fence(memory_order_seq_cst);
         size_t b= bottom.load(memory_order_acquire);
@@ -84,6 +136,8 @@ public:
         int size=b-t;
 
         task=curr.load(memory_order_acquire)->get(t);
+
+        thiefEpoch[slot].value.store(UINT64_MAX, memory_order_seq_cst);
         
         if(size>0){
             if(!top.compare_exchange_strong(t,t+1,memory_order_seq_cst)){
